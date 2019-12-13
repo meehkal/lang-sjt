@@ -8,6 +8,7 @@ Alphabet
 
 !! Trigger symbols
 %^2VAPOC:0 ! second-syllable-vowel apocope
+%^DPAL:0   ! depalatalization
 %^AUML:0   ! a-umlaut, e.g. 3Sg.Prs or Ill.Sg
 %^WG:0     ! weak consonant stem gradation 
 
@@ -20,38 +21,68 @@ Alphabet
 
 Sets
 
-VOWEL = а е ё и о у э ю я  
-    а̄ е̄ ё̄ ӣ о̄ ӯ э̄ ю̄ я̄
-    ӓ         ӱ ӭ  
+VOWEL = а е ё и о у ы э ю я  
+        а̄ е̄ ё̄ ӣ о̄ ӯ ы̄ э̄ ю̄ я̄
+        ӓ         ӱ ӹ ӭ  
 ;
 
 CONS = б в г д ж з Һ й ҋ к л ӆ м ӎ н ӊ ӈ п р ҏ с т ф х ц ч ш щ  
 ;
 
-PALMARK = ь Ь ҍ Ҍ
+PALCONS = ж й ҋ ч !can only by followed by PALVOWEL
+;
+
+PALVOW = е е̄ ё ё̄ и ӣ ю ю̄ я я̄
+;
+
+HPALVOW = ӓ ӱ ӹ ӭ  
+
+;
+
+PALMARK = ь ҍ
 ; 
  
-DUMMY = %^2VAPOC %^AUML %^WG 
+DUMMY = %^2VAPOC %^DPAL %^AUML %^WG 
 ;
  
+
  
 Rules
 
 "Quantitative CG xx:x (of continuants)" !e.g. кылль:кыль, мырр:мыр
-Cx:0 <=> VOWEL: _ Cx: (PALMARK:) %^WG: ;
- where Cx in ( л ) ; !( в ж з й л м н ӈ р ф х ) ; 
+Cx:0 <=> VOWEL: _ Cx: (PALMARK:) %^WG:0 ;
+ where Cx in ( в ж з й л м н ӈ р ф х ) ; 
 
 
 "Quantitative CG xxy:xy (of nonpal/pal clusters)" !e.g. са̄ррн:са̄рн, ко̄ллм:ко̄лм, сыййт:сыйт, пе̄ййв:пе̄йв, алльм:альм, etc. 
-Cx:0 <=> VOWEL: Cx: _ (PALMARK:) Cy: %^WG: ;
- where Cx in ( в л л й й й м н н п р ш ш )  
-       Cy in ( т к м в н т ч ц ч ч н к т )
+Cx:0 <=> VOWEL: Cx: _ (PALMARK:) Cy: %^WG:0 ;
+ where Cx in ( в в л л й й й м н н п р ш ш )  
+       Cy in ( р т к м в н т ч ц ч ч н к т )
        matched ;
 !!€ пеййв%^WG
 !!€ пей0в0
 
 !!€ алльм%^WG
 !!€ ал0ьм0
+
+
+"Qualitative CG һC:C (short preaspiration)" ! һк:к, һт:т
+һ:0 <=> VOWEL _ Cx: (PALMARK:) %^WG:0 ;
+ where Cx in ( к п т ч ц ) ;
+ 
+
+"Depalatalization (cluster medial palatal mark deletion)" !я̄ввьр:а̄ввр-
+ь:0 <=> VOWEL Cx:+ _ Cy (DUMMY:0) %^DPAL:0 ;
+ where Cx in ( в )  
+       Cy in ( р )
+       matched ;
+       
+       
+"Depalatalization (C-final palatal mark deletion)" !пуэдтҍ-:пуэдт
+ҍ:0 <=> VOWEL Cx Cy: _ (DUMMY:0) %^DPAL:0 ;
+ where Cx in ( д )  
+       Cy in ( т )
+       matched ;
 
 
 "Diphthongization о̄-уа I" ! уа:0о (чуанн-:чонн)
@@ -63,16 +94,3 @@ Cx:0 <=> VOWEL: Cx: _ (PALMARK:) Cy: %^WG: ;
 "2syllableV apocope" !пя̄дцэл:пя̄дцл-
 Cx:0 <=> п я я д ц _ CONS %^2VAPOC: ; !C-stem should be defined better
  where Cx in ( э а ) ;
-
-
-"Deleting stem-final s in s genitive"
- s:0 <=> VOWEL s %>: _ ;
-
-!!€ primus%>s
-!!€ primus00
-
-!!€grís%>s
-!!€grís00
-
-!!$grís%>s
-!!$grís0s

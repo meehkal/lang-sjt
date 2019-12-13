@@ -2,19 +2,40 @@
 !  ---------------
 !! The Ter Sami language verbs inflect in persons.
 
-LEXICON Verb1A
-+V: InfSuf    ;
-+V: GerISuf   ;
-+V: PrsPrcSuf ;
-+V: PrsSg3Suf ;
+LEXICON V1A
++V:       InfSuf-е    ;
++V:%^DPAL GerISuf     ;
++V:%^DPAL PrsPrcSuf   ;
++V:%^DPAL PrsSg3Suf   ;
++V:%^WG   Conditional ; !?depal?
 
-LEXICON Verb1B
-+V: InfSuf    ;
+LEXICON V1C
++V:             InfSuf-е    ;
++V:%^DPAL%^AUML GerISuf     ;
++V:%^DPAL%^AUML PrsPrcSuf   ;
++V:%^DPAL%^AUML PrsSg3Suf   ;
++V:%^WG         Conditional ; !?depal? ?umlaut/ablaut?
+
+LEXICON V2A
++V:     InfSuf-э    ;
++V:     GerISuf     ;
++V:     PrsPrcSuf   ;
++V:     PrsSg3Suf   ;
++V:%^WG Conditional ;
+
+LEXICON V2B
++V:       InfSuf-э  ;
 +V:%^AUML GerISuf   ;
 +V:%^AUML PrsPrcSuf ;
 +V:%^AUML PrsSg3Suf ;
 
-LEXICON InfSuf
+LEXICON Conditional
++Cond+Sg3:%>эһч # ; 
+
+LEXICON InfSuf-е
++Inf:%>е     # ;
+
+LEXICON InfSuf-э
 +Inf:%>э     # ;
 
 LEXICON GerISuf

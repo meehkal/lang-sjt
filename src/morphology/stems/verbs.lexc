@@ -12,12 +12,19 @@ Verbstems ;
 
 LEXICON Verbstems
 
+!monosyllabic, str-wk, palatalized inflection stem, no ablaut/umlaut
+кееһче:кееһч           V1A "schauen" ;
+юльсассьтэ:юльсассьт   V1A "trinken (derivation)" ;
+
+!monosyllabic, str-wk, palatalized inflection stem, ablaut+umlaut
+пуэдтӭ:пуэдтҍ          V1C "kommen" ;
+
 !monosyllabic, str-wk, nonpalatalized inflection stem, no ablaut/umlaut
-вуэсстлуввэ:вуэсстлувв Verb1A "anbrechen" ;
-пуднэдтэ:пуднэдт       Verb1A "sich ermüden" ;
+вуэсстлуввэ:вуэсстлувв V2A "treffen (derivation)" ;
+пуднэдтэ:пуднэдт       V2A "enden (derivation)" ;
+тааһтэ:тааһт           V2A "möchten" ;
 
 !monosyllabic, str-wk, nonpalatalized inflection stem, ablaut/umlaut
-чооннэ:чоонн             Verb1B "kreisen" ;
-
+чооннэ:чоонн           V2B "kreisen" ;
 
 ! vim: set ft=xfst-lexc:

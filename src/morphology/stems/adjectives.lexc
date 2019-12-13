@@ -4,7 +4,12 @@
 
 LEXICON Adjectives
 
-шуурр      adj "groß / большой" ;
+чииллк  A2 ;
+шуурр   A2 "groß / большой" ;
+
+коаллэш A3 "lieb" ;
+
+ееррка  A4 "uralt" ;
 
 ! vim: set ft=xfst-lexc:
 
@@ -13,7 +18,7 @@ LEXICON Adjectives
 !  ----------
 !! Adverbs in the Ter Sami language describe things.
 
-LEXICON adv   !!= * __@CODE@__ adds the tag +Adv
+LEXICON adv
 +Adv: # ;
 
 LEXICON Adverbs
@@ -21,4 +26,31 @@ LEXICON Adverbs
 ӣнцэ adv ;
 
 ! vim: set ft=xfst-lexc:
+
+
+!! Conjunctions
+!  ----------
+!! Concunctions in the Ter Sami language describe things.
+
+LEXICON conj
++CC: # ;
+
+LEXICON Conjunctions
+
+да conj ;
+я  conj ;
+
+! vim: set ft=xfst-lexc:
+
+
+!! Conjunctions
+!  ----------
+!! Concunctions in the Ter Sami language describe things.
+
+LEXICON postp
++PP: # ;
+
+LEXICON Adpositions
+
+ээл postp ;
 
