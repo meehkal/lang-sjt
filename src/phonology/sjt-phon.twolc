@@ -3,21 +3,49 @@
 !! =================================== !
 
 Alphabet
- a b c d e f g h i j k l m n o p q r s t u v w x y z æ ø å
- á é ó ú í à è ò ù ì ä ë ö ü ï â ê ô û î ã ý þ ñ ð ß ç
+!! Alphabet
+а А ӓ Ӓ а̄ А̄ б Б в В г Г д Д е Е ё Ё е̄ Е̄ ё̄ Ё̄ ж Ж з З һ Һ и И ӣ Ӣ й Й ҋ Ҋ к К л Л ӆ Ӆ м М ӎ Ӎ н Н ӊ Ӊ ӈ Ӈ о О о̄ О̄ п П р Р ҏ Ҏ с С т Т у У ӱ Ӱ ӯ Ӯ ф Ф х Х ц Ц ч Ч ш Ш щ Щ ъ Ъ ы Ы ы̄ Ы̄ ь Ь ъ Ъ ҍ Ҍ э Э ӭ Ӭ э̄ Э̄ ю Ю ю̄ Ю̄ я Я я̄ Я̄ 
 
- A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Æ Ø Å
- Á É Ó Ú Í À È Ò Ù Ì Ä Ë Ö Ü Ï Â Ê Ô Û Î Ã Ý þ Ñ Ð
+!! Trigger symbols
+%^WG:0 ! weak consonant stem gradation 
 
- %>:0 ;
+!! Morpheme boundaries
+%> ! Inflectional suffix
+%^ ! (exceptional) soft hyphenation point
+;
 
 Sets
 
- Vow = a e i o u y æ ø å 
-       á é ó ú í à è ò ù ì ä ë ö ü ï â ê ô û î ã ý ;
- Cns = b c d f g h j k l m n p q r s t v w x z ð þ ;
+V = а е ё и о у э ю я  
+    а̄ е̄ ё̄ ӣ о̄ ӯ э̄ ю̄ я̄
+    ӓ         ӱ ӭ  
+;
+
+C = б в г д ж з Һ й ҋ к л ӆ м ӎ н ӊ ӈ п р ҏ с т ф х ц ч ш щ  
+;
+
+PALMARK = ь Ь ҍ Ҍ
+; 
+ 
+Dummy = %^WG
+;
+ 
  
 Rules
+
+"Quantitative CG xx:x (of continuants)" !e.g. кылль:кыль, мырр:мыр
+Cx:0 <=> V: _ Cx: (PALMARK:) %^WG: ;
+ where Cx in ( л ) ; !( в ж з й л м н ӈ р ф х ) ; 
+
+
+"Quantitative CG xxy:xy (of nonpal clusters)" !e.g. са̄ррн:са̄рн, ко̄ллм:ко̄лм, сыййт:сыйт, пе̄ййв:пе̄йв, etc. 
+Cx:0 <=> Cx: _ Cy: %^WG: ;
+ where Cx in ( й ) !( в л й й й м н н п р ш ш )  
+       Cy in ( в ) !( т к в н т ч ц ч ч н к т )
+       matched ;
+!!€ пеййв%^WG
+!!€ пейв
+
 
 "Deleting stem-final s in s genitive"
  s:0 <=> Vow s %>: _ ;

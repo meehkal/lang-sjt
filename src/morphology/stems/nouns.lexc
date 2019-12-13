@@ -3,6 +3,15 @@
 !! Nouns in the Ter Sami language are things.
 
 LEXICON Nouns
-куагар Cases "Lappentaucher" ;
 
-! vim: set ft=xfst-lexc:
+пе̄ййв 1A ;
+кӯлль 1A ;
+
+!! Following tests
+кылль 1A ;
+кы̄лль 1A ;
+
+!! Following dump
+куагар 1A ;
+
+! vim: set ft=xfst-lexc: !!this line was included in the empty project file

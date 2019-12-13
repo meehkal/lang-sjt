@@ -1,7 +1,28 @@
 !! Noun inflection
 !  ---------------
-!! The Ter Sami language nouns inflect in cases.
+!! Nouns in the Ter Sami language inflect for number, case, and possessor.
 
+!! "class-1"    = monosyllabic/non-palatalized inflection foot
+!! "subclass-A" = str-wk, no ablaut/umlaut, no palatalization in Ill.Sg
+LEXICON 1A
++N:     SgNomSuf         ;
++N:%^WG SgGenAccPlNomSuf ;
+!+N:     SgIllSufA        ; 
+!+N:%^WG SgLocSuf    ;
+!+N:%^WG SgAbeSuf    ;
+!+N:%^WG SgComSuf    ;
+!+N:     EssSuf      ;
+!+N:     ParSufE     ;
+!
+!+N:%^WG PlNomSuf    ;
+!+N:%^WG PlGenSuf    ;
+!+N:%^WG PlAccSuf    ;
+!+N:%^WG PlIllSuf    ;
+!+N:%^WG PlLocSuf    ;
+!+N:%^WG PlAbeSuf    ;
+!+N:%^WG PlComSuf    ;
+
+!! following example source from empty project file
 LEXICON Cases
 +N+sg+nom:0     #   ;
 +N+pl+nom:i     #   ;
@@ -9,7 +30,21 @@ LEXICON Cases
 +N+pl+loc:ias   #   ;
 +N+sg+acc:at    #   ;
 +N+pl+acc:iat   #   ;
-#:0   Nouns   ;
 
-! vim: set ft=xfst-lexc:
+#:0   Nouns   ; ! line from empty project file
+
+!! Following the suffixes
+
+LEXICON SgNomSuf
++Sg+Nom:%>0 # ;
+
+LEXICON SgGenAccPlNomSuf
++Sg+Gen:%>0 # ;
++Sg+Acc:%>0 # ;
++Pl+Nom:%>0 # ;
+
+!LEXICON SgIllSufA
+!+Sg+Ill:%>а # ;
+
+! vim: set ft=xfst-lexc: !!this line was included in the empty project file
 
