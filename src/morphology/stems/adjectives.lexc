@@ -6,3 +6,17 @@ LEXICON Adjectives
 adjective    Comparisons   ;
 
 ! vim: set ft=xfst-lexc:
+
+!! Adverbs
+!  ----------
+!! Adverbs in the Ter Sami language describe things.
+
+LEXICON adv   !!= * __@CODE@__ adds the tag +Adv
++Adv: # ;
+
+LEXICON Adverbs
+
+ӣнцэ adv ;
+
+! vim: set ft=xfst-lexc:
+

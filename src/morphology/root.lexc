@@ -20,7 +20,7 @@
 
 Multichar_Symbols  !!≈ !!!Definitions for @CODE@
 
-! Trigger symbols
+! Trigger symbols (for regulating the twolc file)
 %^WG  !weak grade
 
 ! Morpheme boundaries
@@ -146,6 +146,7 @@ LEXICON Root
 0   Nouns       ;
 0   Verbs       ;
 0   Adjectives  ;
+0   Adverbs     ;
 0   Pronouns    ;
 0   Numerals    ;
 0   Prefixes    ;

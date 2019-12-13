@@ -3,6 +3,15 @@
 !! Verbs in the Ter Sami language are actions.
 
 LEXICON Verbs
-verb    Persons   ;
+!NegAux ; ! negative auxilary
+!Cop	; ! copula, auxilary
+!NegCop ;
+!ImpMod ;
+Verbstems ;
+
+
+LEXICON Verbstems
+
+вуэсстлуввэ:вуэсстлувв Verb1A ;
 
 ! vim: set ft=xfst-lexc:
