@@ -2,13 +2,13 @@
 !  ---------------
 !! Nouns in the Ter Sami language inflect for number, case, and possessor.
 
-!! "class-1"    = monosyllabic/non-palatalized inflection foot
-!! "subclass-A" = str-wk, no ablaut/umlaut, no palatalization in Ill.Sg
-LEXICON 1A
+!! "class-1"    = monosyllabic/palatalized inflection foot
+!! "subclass-A" = str-wk, depalatalization in Ill.Sg ?no ablaut/umlaut?
+LEXICON N1A
 +N:     SgNomSuf         ;
 +N:%^WG SgGenAccPlNomSuf ;
 !+N:     SgIllSufA        ; 
-!+N:%^WG SgLocSuf    ;
++N:%^WG SgLocSuf         ;
 !+N:%^WG SgAbeSuf    ;
 !+N:%^WG SgComSuf    ;
 !+N:     EssSuf      ;
@@ -21,6 +21,10 @@ LEXICON 1A
 !+N:%^WG PlLocSuf    ;
 !+N:%^WG PlAbeSuf    ;
 !+N:%^WG PlComSuf    ;
+
+LEXICON N3
++N:         SgNomSuf    ;
++N:%^2VAPOC SgComSuf    ;
 
 !! following example source from empty project file
 LEXICON Cases
@@ -43,8 +47,11 @@ LEXICON SgGenAccPlNomSuf
 +Sg+Acc:%>0 # ;
 +Pl+Nom:%>0 # ;
 
-!LEXICON SgIllSufA
-!+Sg+Ill:%>а # ;
+LEXICON SgLocSuf
++Sg+Loc:%>эсьт # ;
+
+LEXICON SgComSuf
++Sg+Com:%>энҍ # ;
 
 ! vim: set ft=xfst-lexc: !!this line was included in the empty project file
 

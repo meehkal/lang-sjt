@@ -3,12 +3,28 @@
 !! The Ter Sami language verbs inflect in persons.
 
 LEXICON Verb1A
-+V: InfSuf ;
++V: InfSuf    ;
++V: GerISuf   ;
++V: PrsPrcSuf ;
++V: PrsSg3Suf ;
+
+LEXICON Verb1B
++V: InfSuf    ;
++V:%^AUML GerISuf   ;
++V:%^AUML PrsPrcSuf ;
++V:%^AUML PrsSg3Suf ;
 
 LEXICON InfSuf
-+Inf:%>э # ;
++Inf:%>э     # ;
 
-#:0   Nouns   ;! line from empty project file
+LEXICON GerISuf
++GerI:%>мэнҍ # ;
+
+LEXICON PrsPrcSuf
++PrsPrc:%>ма # ;
+
+LEXICON PrsSg3Suf
++Prs+Sg3:%>0 # ;
 
 ! vim: set ft=xfst-lexc:
 

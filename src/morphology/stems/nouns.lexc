@@ -4,16 +4,15 @@
 
 LEXICON Nouns
 
-кӯлль      1A ;
-пассь      1A ;
-пассьпе̄ййв 1A ;
-пе̄ййв      1A ;
+! monosyllabic, palatalized, str-wk
+алльм      N1A ;
+кӯлль      N1A ;
+пассь      N1A ;
+пассьпе̄ййв N1A ;!unclear whether palatalized
+пе̄ййв      N1A ;!unclear whether palatalized
 
-!! Following tests
-кылль 1A ;
-кы̄лль 1A ;
-
-!! Following dump
-куагар 1A ;
+! bisyllabic, no stem alternation
+куагар  N3 ;
+пяядцэл N3 ;
 
 ! vim: set ft=xfst-lexc: !!this line was included in the empty project file

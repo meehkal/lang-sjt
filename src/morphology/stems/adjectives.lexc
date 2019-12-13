@@ -3,9 +3,11 @@
 !! Adjectives in the Ter Sami language describe things.
 
 LEXICON Adjectives
-adjective    Comparisons   ;
+
+шуурр      adj "groß / большой" ;
 
 ! vim: set ft=xfst-lexc:
+
 
 !! Adverbs
 !  ----------

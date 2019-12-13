@@ -20,11 +20,16 @@
 
 Multichar_Symbols  !!≈ !!!Definitions for @CODE@
 
-! Trigger symbols (for regulating the twolc file)
-%^WG  !weak grade
+! Trigger symbols (for regulating the twolc file; there meaning is documented there)
+%^2VAPOC !2-syll-vowel apocope
+%^AUML   !a-umlaut
+%^WG     !weak grade
 
 ! Morpheme boundaries
 %>    ! Inflectional suffix (incl. palatal mark deletion)
+
+!Archiphonemes
+t2
 
 !! !!Analysis symbols
 !  ----------------
@@ -38,6 +43,7 @@ Multichar_Symbols  !!≈ !!!Definitions for @CODE@
 
 !! The parts of speech are further split up into:
  +Prop +Pers +Dem +Interr +Refl +Recipr +Rel +Indef
+ +Attr +Pred
 
 !! The Usage extents are marked using following tags:
  +Err/Orth   
@@ -59,7 +65,7 @@ Multichar_Symbols  !!≈ !!!Definitions for @CODE@
 !! Verb personal forms are:
  +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3
 !! Other verb forms are
- +Inf +Ger +ConNeg +ConNegII +Neg +ImprtII +PrsPrc +PrfPrc +Sup +VGen +VAbess
+ +Inf +GerI +GerII +ConNeg +ConNegII +Neg +ImprtII +PrsPrc +PrfPrc +Sup +VGen +VAbess
 
 ! Abbreviated words are classified with:
  +ABBR +ACR 

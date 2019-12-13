@@ -12,6 +12,12 @@ Verbstems ;
 
 LEXICON Verbstems
 
-вуэсстлуввэ:вуэсстлувв Verb1A ;
+!monosyllabic, str-wk, nonpalatalized inflection stem, no ablaut/umlaut
+вуэсстлуввэ:вуэсстлувв Verb1A "anbrechen" ;
+пуднэдтэ:пуднэдт       Verb1A "sich ermüden" ;
+
+!monosyllabic, str-wk, nonpalatalized inflection stem, ablaut/umlaut
+чооннэ:чоонн             Verb1B "kreisen" ;
+
 
 ! vim: set ft=xfst-lexc:

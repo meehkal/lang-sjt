@@ -2,10 +2,17 @@
 !  --------------------
 !! The Ter Sami language adjectives compare.
 
-LEXICON Comparisons
-+A+pos:0        Cases   ;
-+A+cmp:er       Cases   ;
-+A+sup:est      Cases   ;
+LEXICON adj
+
++A: A1 ;
+
+LEXICON A1
++Attr:%>0 #;
++Pred+Sg:%>0 #;
+
+!LEXICON Comparisons
+!+A+cmp:er       Cases   ;
+!+A+sup:est      Cases   ;
 
 ! vim: set ft=xfst-lexc:
 
