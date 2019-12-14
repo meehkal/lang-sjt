@@ -3,48 +3,52 @@
 !! The Ter Sami language verbs inflect in persons.
 
 LEXICON V1A
-+V:       InfSuf-е    ;
-+V:%^DPAL GerISuf     ;
-+V:%^DPAL PrsPrcSuf   ;
-+V:%^DPAL PrsSg3Suf   ;
-+V:%^WG   Conditional ; !?depal?
++V:       InfSuf-е     ;
++V:%^DPAL GerISuf-мэнҍ ;
++V:%^DPAL PrsPrcSuf-ма    ;
++V:%^DPAL PrsSg3Suf-Ø    ;
++V:%^WG   Conditional  ; !?depal?
 
-LEXICON V1C
-+V:             InfSuf-е    ;
-+V:%^DPAL%^AUML GerISuf     ;
-+V:%^DPAL%^AUML PrsPrcSuf   ;
-+V:%^DPAL%^AUML PrsSg3Suf   ;
-+V:%^WG         Conditional ; !?depal? ?umlaut/ablaut?
+LEXICON V1C !пуэдтӭ
++V:             InfSuf-ӭ     ;
++V:%^DPAL%^AUML GerISuf-мэнҍ ;
++V:%^DPAL%^AUML PrsPrcSuf-ма    ;
++V:%^DPAL%^AUML PrsSg3Suf-Ø    ;
++V:%^WG         Conditional  ; !?depal? ?umlaut/ablaut?
 
 LEXICON V2A
-+V:     InfSuf-э    ;
-+V:     GerISuf     ;
-+V:     PrsPrcSuf   ;
-+V:     PrsSg3Suf   ;
-+V:%^WG Conditional ;
++V:     InfSuf-э     ;
++V:     GerISuf-мэнҍ ;
++V:     PrsPrcSuf-ма    ;
++V:     PrsSg3Suf-Ø    ;
++V:%^WG Conditional  ;
 
 LEXICON V2B
-+V:       InfSuf-э  ;
-+V:%^AUML GerISuf   ;
-+V:%^AUML PrsPrcSuf ;
-+V:%^AUML PrsSg3Suf ;
++V:       InfSuf-э     ;
++V:%^AUML GerISuf-мэнҍ ;
++V:%^AUML PrsPrcSuf-ма    ;
++V:%^AUML PrsSg3Suf-Ø    ;
 
 LEXICON Conditional
 +Cond+Sg3:%>эһч # ; 
 
+!The actual suffixes
+
+!Three (orthographic) variants
 LEXICON InfSuf-е
 +Inf:%>е     # ;
-
+LEXICON InfSuf-ӭ
++Inf:%>ӭ     # ;
 LEXICON InfSuf-э
 +Inf:%>э     # ;
 
-LEXICON GerISuf
+LEXICON GerISuf-мэнҍ
 +GerI:%>мэнҍ # ;
 
-LEXICON PrsPrcSuf
+LEXICON PrsPrcSuf-ма
 +PrsPrc:%>ма # ;
 
-LEXICON PrsSg3Suf
+LEXICON PrsSg3Suf-Ø
 +Prs+Sg3:%>0 # ;
 
 ! vim: set ft=xfst-lexc:

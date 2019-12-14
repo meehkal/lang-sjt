@@ -10,7 +10,7 @@ Alphabet
 %^2VAPOC:0 ! second-syllable-vowel apocope
 %^DPAL:0   ! depalatalization
 %^AUML:0   ! a-umlaut, e.g. 3Sg.Prs or Ill.Sg
-%^WG:0     ! weak consonant stem gradation 
+%^WG:0     ! weak consonant stem gradation
 
 !! Morpheme boundaries
 %> ! Inflectional suffix
@@ -21,18 +21,21 @@ Alphabet
 
 Sets
 
-VOWEL = а е ё и о у ы э ю я  
+VOW = а е ё и о у ы э ю я  
         а̄ е̄ ё̄ ӣ о̄ ӯ ы̄ э̄ ю̄ я̄
         ӓ         ӱ ӹ ӭ  
 ;
 
-CONS = б в г д ж з Һ й ҋ к л ӆ м ӎ н ӊ ӈ п р ҏ с т ф х ц ч ш щ  
+CON = б в г д ж з Һ й ҋ к л ӆ м ӎ н ӊ ӈ п р ҏ с т ф х ц ч ш щ  
 ;
 
-PALCONS = ж й ҋ ч !can only by followed by PALVOWEL
+PALCON = ж й ҋ ч !can only by followed by PALVOW
 ;
 
 PALVOW = е е̄ ё ё̄ и ӣ ю ю̄ я я̄
+;
+
+HPALCON = д н ӊ ӈ т !can only by followed by half-palmark
 ;
 
 HPALVOW = ӓ ӱ ӹ ӭ  
@@ -50,12 +53,12 @@ DUMMY = %^2VAPOC %^DPAL %^AUML %^WG
 Rules
 
 "Quantitative CG xx:x (of continuants)" !e.g. кылль:кыль, мырр:мыр
-Cx:0 <=> VOWEL: _ Cx: (PALMARK:) %^WG:0 ;
+Cx:0 <=> VOW: _ Cx: (PALMARK:) %^WG:0 ;
  where Cx in ( в ж з й л м н ӈ р ф х ) ; 
 
 
 "Quantitative CG xxy:xy (of nonpal/pal clusters)" !e.g. са̄ррн:са̄рн, ко̄ллм:ко̄лм, сыййт:сыйт, пе̄ййв:пе̄йв, алльм:альм, etc. 
-Cx:0 <=> VOWEL: Cx: _ (PALMARK:) Cy: %^WG:0 ;
+Cx:0 <=> VOW: Cx: _ (PALMARK:) Cy: %^WG:0 ;
  where Cx in ( в в л л й й й м н н п р ш ш )  
        Cy in ( р т к м в н т ч ц ч ч н к т )
        matched ;
@@ -67,30 +70,38 @@ Cx:0 <=> VOWEL: Cx: _ (PALMARK:) Cy: %^WG:0 ;
 
 
 "Qualitative CG һC:C (short preaspiration)" ! һк:к, һт:т
-һ:0 <=> VOWEL _ Cx: (PALMARK:) %^WG:0 ;
+һ:0 <=> VOW _ Cx: (PALMARK:0) %^WG:0 ;
  where Cx in ( к п т ч ц ) ;
- 
 
+!Morphonologically, the following two rules describe one and the same process
 "Depalatalization (cluster medial palatal mark deletion)" !я̄ввьр:а̄ввр-
-ь:0 <=> VOWEL Cx:+ _ Cy (DUMMY:0) %^DPAL:0 ;
+ь:0 <=> VOW Cx:+ _ Cy (DUMMY:0) %^DPAL:0 ;
  where Cx in ( в )  
        Cy in ( р )
        matched ;
-       
-       
 "Depalatalization (C-final palatal mark deletion)" !пуэдтҍ-:пуэдт
-ҍ:0 <=> VOWEL Cx Cy: _ (DUMMY:0) %^DPAL:0 ;
+ҍ:0 <=> VOW Cx Cy: _ (DUMMY:0) %^DPAL:0 ;
  where Cx in ( д )  
        Cy in ( т )
        matched ;
 
 
-"Diphthongization о̄-уа I" ! уа:0о (чуанн-:чонн)
-о:у <=> _ о: н н %^AUML:0 ; !C-stem should be defined better
-"Diphthongization о̄-уа II" ! уа:0о (чуанн-:чонн)
-о:а <=> о: _ н н %^AUML:0 ; !C-stem should be defined better
+!The following rule is orthographical
+"Palatal mark adjustment"
+ҍ:0 <=> (HPALCON) HPALCON: _ %>: ӭ ;
+
+
+!The following two combined rules describe the a-umlaut (diphthongization) of о̄-уа
+"Umlaut о̄-уа I" ! уа:0о (чуанн-:чонн)
+о:у <=> _ о: н н %^AUML:0 ; !C-stem needs to be defined more general
+"Umlaut о̄-уа II" ! уа:0о (чуанн-:чонн)
+о:а <=> о: _ н н %^AUML:0 ; !C-stem needs to be defined more general
+
+!The following rule describe the umlaut reperesented by уэ-уа in orthography
+"Ablaut уэ-уа"
+э:а <=> у _ д (т) ҍ:0 (DUMMY:0) %^AUML:0 ; !C-stem needs to be defined more general
 
 
 "2syllableV apocope" !пя̄дцэл:пя̄дцл-
-Cx:0 <=> п я я д ц _ CONS %^2VAPOC: ; !C-stem should be defined better
+Cx:0 <=> п я я д ц _ CON %^2VAPOC:0 ; !C-stem needs to be defined more general
  where Cx in ( э а ) ;
