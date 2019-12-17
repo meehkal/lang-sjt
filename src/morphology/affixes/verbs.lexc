@@ -3,53 +3,70 @@
 !! The Ter Sami language verbs inflect in persons.
 
 LEXICON V1A
-+V:       InfSuf-е     ;
-+V:%^DPAL GerISuf-мэнҍ ;
-+V:%^DPAL PrsPrcSuf-ма    ;
-+V:%^DPAL PrsSg3Suf-Ø    ;
-+V:%^WG   Conditional  ; !?depal?
-
++V:                 InfSuf-э     ;
++V:%^WG%^DPAL       PrsSg1Suf-а  ;
++V:%^DPAL           PrsSg3Suf-Ø  ;
++V:                 PrsPl3Suf-эв ;
++V:%^WG             ImpSgSuf-Ø   ;
++V:%^DPAL           GerISuf-мэнҍ ;
++V:%^DPAL           PrsPrcSuf-ма ;
++V:%^WG             Conditional  ; !?depal?
+!---
 LEXICON V1C !пуэдтӭ
-+V:             InfSuf-ӭ     ;
-+V:%^DPAL%^AUML GerISuf-мэнҍ ;
-+V:%^DPAL%^AUML PrsPrcSuf-ма    ;
-+V:%^DPAL%^AUML PrsSg3Suf-Ø    ;
-+V:%^WG         Conditional  ; !?depal? ?umlaut/ablaut?
-
++V:                 InfSuf-э     ;
++V:%^WG%^DPAL%^AUML PrsSg1Suf-а  ;
++V:%^DPAL%^AUML     PrsSg3Suf-Ø  ;
++V:                 PrsPl3Suf-эв ;
++V:%^WG             ImpSgSuf-Ø   ;
++V:%^DPAL%^AUML     GerISuf-мэнҍ ;
++V:%^DPAL%^AUML     PrsPrcSuf-ма ;
++V:%^WG             Conditional  ; !?depal? ?umlaut/ablaut?
+!---
 LEXICON V2A
-+V:     InfSuf-э     ;
-+V:     GerISuf-мэнҍ ;
-+V:     PrsPrcSuf-ма    ;
-+V:     PrsSg3Suf-Ø    ;
-+V:%^WG Conditional  ;
-
++V:                 InfSuf-э     ;
++V:%^WG             PrsSg1Suf-а  ;
++V:                 PrsSg3Suf-Ø  ;
++V:                 PrsPl3Suf-эв ;
++V:%^WG             ImpSgSuf-Ø   ;
++V:                 GerISuf-мэнҍ ;
++V:                 PrsPrcSuf-ма ;
++V:%^WG             Conditional  ;
+!---
 LEXICON V2B
-+V:       InfSuf-э     ;
-+V:%^AUML GerISuf-мэнҍ ;
-+V:%^AUML PrsPrcSuf-ма    ;
-+V:%^AUML PrsSg3Suf-Ø    ;
++V:                 InfSuf-э     ;
++V:%^WG%^AUML       PrsSg1Suf-а  ;
++V:%^AUML           PrsSg3Suf-Ø  ;
++V:                 PrsPl3Suf-эв ;
++V:%^WG             ImpSgSuf-Ø   ;
++V:%^AUML           GerISuf-мэнҍ ;
++V:%^AUML           PrsPrcSuf-ма ;
++V:%^WG             Conditional  ;
+!---
+!---
+!The actual suffixes
+LEXICON InfSuf-э
++Inf:%>э      # ;
+LEXICON PrsSg1Suf-а
++Prs+Sg1:%>а  # ;
+LEXICON PrsSg1Suf-ам
++Prs+Sg1:%>ам # ;
+LEXICON PrsSg3Suf-Ø
++Prs+Sg3:%>0  # ;
+LEXICON PrsPl3Suf-эв
++Prs+Pl3:%>эв # ;
+LEXICON ImpSgSuf-Ø
++Imp+Sg:%>0   # ;
+LEXICON GerISuf-мэнҍ
++GerI:%>мэнҍ  # ;
+LEXICON PrsPrcSuf-ма
++PrsPrc:%>ма  # ;
 
+!testing
 LEXICON Conditional
 +Cond+Sg3:%>эһч # ; 
 
-!The actual suffixes
 
-!Three (orthographic) variants
-LEXICON InfSuf-е
-+Inf:%>е     # ;
-LEXICON InfSuf-ӭ
-+Inf:%>ӭ     # ;
-LEXICON InfSuf-э
-+Inf:%>э     # ;
 
-LEXICON GerISuf-мэнҍ
-+GerI:%>мэнҍ # ;
-
-LEXICON PrsPrcSuf-ма
-+PrsPrc:%>ма # ;
-
-LEXICON PrsSg3Suf-Ø
-+Prs+Sg3:%>0 # ;
 
 ! vim: set ft=xfst-lexc:
 

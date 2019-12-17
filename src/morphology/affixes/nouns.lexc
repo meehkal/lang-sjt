@@ -10,7 +10,7 @@ LEXICON N1A
 +N:%^DPAL SgIllSuf-а       ; 
 +N:%^WG   SgLocSuf         ;
 !+N:%^WG SgAbeSuf    ;
-!+N:%^WG SgComSuf    ;
++N:%^WG   SgComSuf         ;
 !+N:     EssSuf      ;
 !+N:     ParSufE     ;
 !
@@ -25,10 +25,31 @@ LEXICON N1A
 LEXICON N2A
 +N:     SgNomSuf         ;
 +N:%^WG SgGenAccPlNomSuf ;
++N:%^WG SgLocSuf         ;
++N:%^WG SgComSuf         ;
+
+
+LEXICON N2B
++N:     SgNomSuf         ;
++N:     SgGenAccPlNomSuf ;
++N:     SgLocSuf         ;
++N:     SgComSuf         ;
+
 
 LEXICON N3
-+N:         SgNomSuf    ;
-+N:%^2VAPOC SgComSuf    ;
++N:         SgNomSuf         ;
++N:         SgGenAccPlNomSuf ;
++N:%^2VAPOC SgLocSuf         ;
++N:%^2VAPOC SgComSuf         ;
+
+
+LEXICON N4
++N+Der/?+Sg+Nom:%>й   # ;
++N+Der/?+Sg+Gen:%>й   # ;
++N+Der/?+Sg+Acc:%>й   # ;
++N+Der/?+Pl+Nom:%>й   # ;
++N+Der/?+Pl+Acc:%>етҍ # ;
+
 
 LEXICON N5A !derived diminutive noun stems
 +N+Der/Dim1+Sg+Nom:%>энч # ;
@@ -49,9 +70,9 @@ LEXICON Cases
 +N+sg+acc:at    #   ;
 +N+pl+acc:iat   #   ;
 
-#:0   Nouns   ; ! line from empty project file
+!#:0   Nouns   ; ! line from empty project file
 
-!! Following the suffixes
+!! Following the actual noun inflection suffixes
 
 LEXICON SgNomSuf
 +Sg+Nom:%>0 # ;
