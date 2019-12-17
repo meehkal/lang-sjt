@@ -23,7 +23,10 @@ LEXICON adv
 
 LEXICON Adverbs
 
-ӣнцэ adv ;
+ё     adv "schon" ;
+ӣнцэ  adv "am Morgen" ;
+танна adv "dann" ;
+эвтэс adv "nach vorne" ; !cf. postpos. эвтэсьт
 
 ! vim: set ft=xfst-lexc:
 
@@ -54,3 +57,13 @@ LEXICON Adpositions
 
 ээл postp ;
 
+
+!! Particles
+!  ----------
+!! Particles in the Ter Sami language describe things.
+
+LEXICON Clitics
++Pcle:-пэ # ;
++Pcle:-ле # ;
+
+! vim: set ft=xfst-lexc:

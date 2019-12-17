@@ -3,28 +3,50 @@
 !! Verbs in the Ter Sami language are actions.
 
 LEXICON Verbs
-!NegAux ; ! negative auxilary
-!Cop	; ! copula, auxilary
-!NegCop ;
-!ImpMod ;
-Verbstems ;
+negaux ; ! negative auxilary verb
+copaux	; ! copula + auxilary verb
+!modal verb
+BYDT ; !эбе
+!verbroots ;
+verbstems ; !lexical verb
 
 
-LEXICON Verbstems
+LEXICON negaux
++V+Neg+Prs+Sg3:эйй # ;
 
+
+LEXICON copaux
++V+Cop+Prs+Pl3:лев # ;
+
+
+LEXICON BYDT
++V+BYDT+?:быдтӭ            # ;!быдтӭ ля̄йй
++V+BYDT+Prs+Sg3:быдт       # ;
++V+BYDT+DER/?+Sg3:быдҍсувв # ;!regular derivation to V2A
+
+
+LEXICON verbstems
 !monosyllabic, str-wk, palatalized inflection stem, no ablaut/umlaut
-кееһче:кееһч           V1A "schauen" ;
+кееһче:кееһч           V1A "schauen"              ;
+ке̄һче:ке̄һч             V1A "schauen"              ;
+кыррьтэ:кыррьт         V1A "fliegen"              ;
+нееллькэ:неелльк       V1A "hungern"              ;!unclear, whether this is the correct stem inflecting не̄ллкма (sjd ня̄ллкма)
+пыйе:пыйй              V1A "legen"                ;!palatalized stem?
 юльсассьтэ:юльсассьт   V1A "trinken (derivation)" ;
-
+!---
 !monosyllabic, str-wk, palatalized inflection stem, ablaut+umlaut
-пуэдтӭ:пуэдтҍ          V1C "kommen" ;
-
+пуэдтӭ:пуэдтҍ          V1C "kommen"               ;
+еелле:еелль            V1C "leben"                ;
+е̄лле:е̄лль              V1C "leben"                ;
+!---
 !monosyllabic, str-wk, nonpalatalized inflection stem, no ablaut/umlaut
 вуэсстлуввэ:вуэсстлувв V2A "treffen (derivation)" ;
-пуднэдтэ:пуднэдт       V2A "enden (derivation)" ;
-тааһтэ:тааһт           V2A "möchten" ;
-
+лоаннтэ:лоаннт         V2A "schlafen"             ;
+пуднэдтэ:пуднэдт       V2A "enden (derivation)"   ;
+тааһтэ:тааһт           V2A "möchten"              ;
+!---
 !monosyllabic, str-wk, nonpalatalized inflection stem, ablaut/umlaut
-чооннэ:чоонн           V2B "kreisen" ;
+чооннэ:чоонн           V2B "kreisen"              ;
+чо̄ннэ:чо̄нн             V2B                        ;
 
 ! vim: set ft=xfst-lexc:

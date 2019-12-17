@@ -5,19 +5,29 @@
 LEXICON Nouns
 
 ! monosyllabic, palatalized, str-wk
-алльм      N1A ;
-куулль     N1A ;
-пассь      N1A ;
-пассьпе̄ййв N1A ;!unclear whether palatalized
-пееййв     N1A ;!unclear whether palatalized
-яяввьр     N1A ;
+алльм       N1A ;
+куулль      N1A ;
+пааҋк       N1A ;!unclear whether stem is palatalized; па̄ҋк:па̄йк
+пассь       N1A ;
+пассьпееййв N1A ;!unclear whether stem is palatalized
+пееййв      N1A ;!unclear whether stem is palatalized
+яяввьр      N1A ;
 
 ! monosyllabic, nonpalatalized, str-wk
 чаарр      N2A ;
 
+! monosyllabic, nonpalatalized, str
+пысс       N2B ;
+
 ! bisyllabic, no stem alternation
-куагар  N3 ;
-пяядцэл N3 ;
+куагар    N3 ;
+пяядцэл   N3 ;
+
+
+! derived participle noun stemss
+кыррьтэй:кыррьтэ   N4 ;!actually a regular verb root
+мееһцьтэй:мееһцьтэ N4 ;!actually a regular verb root
+
 
 ! derived diminutive noun stems
 чоазэнч:чоаз N5A ;
