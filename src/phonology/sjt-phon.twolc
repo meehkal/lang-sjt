@@ -6,7 +6,7 @@ Alphabet
 !! Alphabet
 а А ӓ Ӓ а̄ А̄ б Б в В г Г д Д е Е ё Ё е̄ Е̄ ё̄ Ё̄ ж Ж з З һ Һ и И ӣ Ӣ й Й ҋ Ҋ к К л Л ӆ Ӆ м М ӎ Ӎ н Н ӊ Ӊ ӈ Ӈ о О о̄ О̄ п П р Р ҏ Ҏ с С т Т у У ӱ Ӱ ӯ Ӯ ф Ф х Х ц Ц ч Ч ш Ш щ Щ ы Ы ы̄ Ы̄ ь Ь ъ Ъ ҍ Ҍ э Э ӭ Ӭ э̄ Э̄ ю Ю ю̄ Ю̄ я Я я̄ Я̄ 
 
-к:0 п:0 т:0 ь:0 ҍ:0
+к:0 л:0 п:0 т:0 ь:0 ҍ:0
 
 !! Trigger symbols
 %^2VAPOC:0 ! second-syllable-vowel apocope
@@ -43,6 +43,7 @@ DUMMY = %^2VAPOC %^DPAL %^AUML %^WG
 Definitions
 
 GEMIN = [ д т |
+          л л | 
           н н
                 ]
 ;
@@ -61,51 +62,51 @@ CWEAK = [ ц
  
 Rules
 
-!The following sets of rules are purely orthographical, they model underlying -э, -а, ¿-ы? in order to surface as -ё, -ӭ, -я, -ӓ, ¿-ӹ? once a palatalization mark or й is replaced
-!Surface -е/-ӭ (from -э) replacing ь/ҍ
-"Palatal vowel adjustment I"
-MARKPAL:0 <=> CON: _   (DUMMY:0) (DUMMY:0) %>: э: ;
-"Palatal vowel adjustment II"
-э:е       <=> CON: ь:0 (DUMMY:0) (DUMMY:0) %>: _  ;
-"Palatal vowel adjustment III"
-э:ӭ       <=> CON: ҍ:0 (DUMMY:0) (DUMMY:0) %>: _  ;
-!а:я
-!а:ӓ
-!---
-!Surface -е/-я (from -э/-а) after ч
-"Palatal vowel adjustment (after ч) I"
-э:е <=> ч (DUMMY:0) (DUMMY:0) %>: _ ;
-"Palatal vowel adjustment (after ч) II"
-а:я <=> ч (DUMMY:0) (DUMMY:0) %>: _ ;
-!---
-!Surface -е/-я (from -э/-а) after й, ҋ
-"Palatal vowel adjustment (after й, ҋ) Ia"
-й:0 <=> _   (DUMMY:0) (DUMMY:0) %>: э: ;
-"Palatal vowel adjustment (after й, ҋ) Ib"
-э:е <=> й:0 (DUMMY:0) (DUMMY:0) %>: _  ;
-"Palatal vowel adjustment (after й, ҋ) IIa"
-й:0 <=> _   (DUMMY:0) (DUMMY:0) %>: а: ;
-"Palatal vowel adjustment (after й, ҋ) IIb"
-а:я <=> й:0 (DUMMY:0) (DUMMY:0) %>: _  ;
-!ҋ
-!---
-!---
-!The following sets of rules model the various consonant stems undergoing gradation
+"Palatal mark deletion"							  
+MARKPAL:0 <=> _             (DUMMY:0)*           %>: э:e ;
+              _             (DUMMY:0)*           %>: э:ӭ ;
+              _             (DUMMY:0)*           %>: а:я ;
+              _             (DUMMY:0)*           %>: а:ӓ ;
+              _             (DUMMY:0)* %^DPAL:0          ;
+												  
+"Palatal glide deletion"					  
+й:0       <=> _             (DUMMY:0)*           %>: э:е ;
+              _             (DUMMY:0)*           %>: э:ӭ ;
+              _             (DUMMY:0)*           %>: а:я ;
+              _             (DUMMY:0)*           %>: а:ӓ ;
+              _ й: %^WG:0                                ;
+
+"Palatal vowel adjustment I"					  
+э:е       <=>   ь:0         (DUMMY:0)* \%^DPAL:0 %>: _   ;
+                й:0 \%^WG:0 (DUMMY:0)*           %>: _   ;
+                ч           (DUMMY:0)*           %>: _   ;
+												  
+"Palatal vowel adjustment II"					  
+э:ӭ       <=>   ҍ:0         (DUMMY:0)* \%^DPAL:0 %>: _   ;
+												  									  
+"Palatal vowel adjustment III"					  
+а:я       <=>   ь:0         (DUMMY:0)* \%^DPAL:0 %>: _   ;
+                й:0 \%^WG:0 (DUMMY:0)*           %>: _   ;
+                ч           (DUMMY:0)*           %>: _   ;
+
+"Palatal vowel adjustment IV"					  
+а:ӓ       <=>   ҍ:0         (DUMMY:0)* \%^DPAL:0 %>: _   ;
+      											  
+
+!The following sets of rules model the various consonant stems undergoing gradation from strong to weak
 !continuant geminates (except й), where the rule removes the first constituent, e.g. кылль:кыль, мырр:мыр
 "Quantitative CG xx:x (of nonpal/pal continuants)" 
-Cx:0 <=> _ Cx (MARKPAL:) %^WG:0 ;
+Cx:0      <=> _   Cx (MARKPAL:) %^WG:0             ;
  where Cx in ( в ж з л ӆ м ӎ н ӊ ӈ р ҏ ф х ) ;
 !continuant geminate й, where the rule removes the first constituent (second constituent also undergoing a rule, see above)
-"Quantitative CG xx:x (of й)"
-й:0  <=> _ й:            %^WG:0 ;
+!"Quantitative CG xx:x (of й)"
+!й:0  <=> _ й:            %^WG:0 ;
 !ҋ
 !--- 
 !stop and affricate geminates, where the rule removes the first constituent, e.g. 
 "Quantitative CG xx:x (of stops/affricates)"
 CONSTOPVL:0 <=> Cx _ (MARKPAL:) %^WG:0 ;
- where Cx in ( б д г ) ;!list is perhaps incomplete
-!       Cy in ( д ) ;!list is perhaps incomplete
-!       matched ;
+ where Cx in ( б д г ) ;
 !---
 !clusters (except лльй), where the rule removes the first constituent of the first part of the cluster, e.g. са̄ррн:са̄рн, ко̄ллм:ко̄лм, сыййт:сыйт, пе̄ййв:пе̄йв, алльм:альм
 "Quantitative CG xxy:xy (of nonpal/pal clusters)"
@@ -125,23 +126,14 @@ Cx:0 <=> _ Cx (MARKPAL:) Cy %^WG:0 ;
 !preaspirated stops and affricates, where һ is removed, e.g. һк:к, һт:т
 "Qualitative CG һC:C (short preaspiration)" 
 һ:0 <=> _ CONSTOPVL (MARKPAL:) %^WG:0 ;
+!---
+!---
+!The following sets of rules model the various consonant stems undergoing depalatalization
+!Depalatalization in clusters
+!
+!Cx:0 <=> Cx: Cx _ (DUMMY:0) %^DPAL:0 ;
+! where Cx in ( в ж з л ӆ м ӎ н ӊ ӈ р ҏ ф х ) ;
 
-
-
-
-!!Rules for depalatalization in various consonant stems
-!!Depalatalization in singleton or geminate non-dental continuants, e.g. кӯлль:кӯлл-
-!"C-final depal (continuants)"
-!MARKPAL:0 <=> Cx: Cx _ (DUMMY:0) %^DPAL:0 ;
-! where Cx in ( в ж з л ӆ м ӎ н ӊ ӈ р ҏ ф х ) ;!check дж and дз
-!!Depalatalization in singleton or geminate non-dental continuants, e.g. пуэдтҍ-:пуэдт
-!"C-final depal (stops)"
-!MARKPAL:0 <=> Cx Cy: _ (DUMMY:0) %^DPAL:0 ;
-! where Cx in ( д д д б г )  
-!       Cy in ( т ц ч п к )
-!       matched ;
-
- 
 !!Morphonologically, the following two rules describe one and the same process
 !"Depalatalization (cluster medial palatal mark deletion)" !я̄ввьр:а̄ввр-
 !ь:0 <=> VOW Cx:+ _ Cy (DUMMY:0) %^DPAL:0 ;
