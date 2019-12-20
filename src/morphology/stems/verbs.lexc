@@ -31,6 +31,7 @@ LEXICON verbstems
 ке̄һче:ке̄һч             V1A "schauen"              ;
 кыррьтэ:кыррьт         V1A "fliegen"              ;
 нееллькэ:неелльк       V1A "hungern"              ;!nonsense form for testing!unclear, whether this is the correct stem inflecting не̄ллкма (sjd ня̄ллкма)
+не̄ллькэ:не̄лльк         V1A "hungern"              ;
 пыйе:пыйй              V1A "legen"                ;!palatalized stem?
 юльсассьтэ:юльсассьт   V1A "trinken (derivation)" ;
 !---
@@ -45,6 +46,7 @@ LEXICON verbstems
 лоаннтэ:лоаннт         V2A "schlafen"             ;
 пуднэдтэ:пуднэдт       V2A "enden (derivation)"   ;
 тааһтэ:тааһт           V2A "möchten"              ;!nonsense form for testing
+та̄һтэ:та̄һт             V2A "möchten"              ;!nonsense form for testing
 !---
 !monosyllabic, str-wk, nonpalatalized inflection stem, ablaut/umlaut
 чооннэ:чоонн           V2B "kreisen"              ;!nonsense form for testing
