@@ -27,26 +27,27 @@ LEXICON BYDT
 
 LEXICON verbstems
 !monosyllabic, str-wk, palatalized inflection stem, no ablaut/umlaut
-кееһче:кееһч           V1A "schauen"              ;
+кееһче:кееһч           V1A "schauen"              ;!nonsense form for testing
 ке̄һче:ке̄һч             V1A "schauen"              ;
 кыррьтэ:кыррьт         V1A "fliegen"              ;
-нееллькэ:неелльк       V1A "hungern"              ;!unclear, whether this is the correct stem inflecting не̄ллкма (sjd ня̄ллкма)
+нееллькэ:неелльк       V1A "hungern"              ;!nonsense form for testing!unclear, whether this is the correct stem inflecting не̄ллкма (sjd ня̄ллкма)
 пыйе:пыйй              V1A "legen"                ;!palatalized stem?
 юльсассьтэ:юльсассьт   V1A "trinken (derivation)" ;
 !---
 !monosyllabic, str-wk, palatalized inflection stem, ablaut+umlaut
 пуэдтӭ:пуэдтҍ          V1C "kommen"               ;
-еелле:еелль            V1C "leben"                ;
+еелле:еелль            V1C "leben"                ;!nonsense form for testing
+елле:елль              V1C "leben"                ;!nonsense form for testing
 е̄лле:е̄лль              V1C "leben"                ;
 !---
 !monosyllabic, str-wk, nonpalatalized inflection stem, no ablaut/umlaut
 вуэсстлуввэ:вуэсстлувв V2A "treffen (derivation)" ;
 лоаннтэ:лоаннт         V2A "schlafen"             ;
 пуднэдтэ:пуднэдт       V2A "enden (derivation)"   ;
-тааһтэ:тааһт           V2A "möchten"              ;
+тааһтэ:тааһт           V2A "möchten"              ;!nonsense form for testing
 !---
 !monosyllabic, str-wk, nonpalatalized inflection stem, ablaut/umlaut
-чооннэ:чоонн           V2B "kreisen"              ;
+чооннэ:чоонн           V2B "kreisen"              ;!nonsense form for testing
 чо̄ннэ:чо̄нн             V2B                        ;
 
 ! vim: set ft=xfst-lexc:
