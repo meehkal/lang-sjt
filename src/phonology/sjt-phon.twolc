@@ -123,6 +123,12 @@ Cx:0 <=> _ Cx (MARKPAL:) Cy %^WG:0 ;
        matched ;
 
 !!!Testing
+"Ablaut уэ-уа"
+э:а <=> у _ д т:0 (MARKPAL:0) (DUMMY:0)* %^AUML:0 ; 
+        у _ д т   (MARKPAL:0) (DUMMY:0)* %^AUML:0 ;
+!!!Testing
+
+!!!Testing
 "Testing Macron"
 VOWEE:VOWJAA <=> _ л л ь:0 %^DPAL:0 %^AUML:0 ;
 !!е̄лль^DPAL%^AUML%>0
@@ -141,18 +147,7 @@ VOWEE:VOWJAA <=> _ л л ь:0 %^DPAL:0 %^AUML:0 ;
 !о:у <=> _ о: GEMIN %^AUML:0 ;
 !"Umlaut о̄-уа II" ! уа:0о (чуанн-:чонн)
 !о:а <=> о: _ GEMIN %^AUML:0 ;
-!
-!!Cx:Cy <=> _ н н %^AUML:0 ;
-!! where Cx in ( о̄ )
-!!       Cy in ( ӯ )
-!!       matched ;
-!
-!
-!!The following rule describe the umlaut reperesented by уэ-уа in orthography
-!"Ablaut уэ-уа"
-!э:а <=> у _ [GEMIN|SIMPL] ҍ:0 (DUMMY:0) %^AUML:0 ;
-!
-!
+
 !"2syllableV apocope" !пя̄дцэл:пя̄дцл-, куагар:куагр-
 !Cx:0 <=> VOW [CSTRO|CWEAK] _ CON (MARKPAL) %^2VAPOC:0 ; !CON can be defined less generally
 ! where Cx in ( э а ) ;
