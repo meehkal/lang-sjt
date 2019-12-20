@@ -131,7 +131,9 @@ VOWEE:VOWJAA <=> _ л л ь:0 %^DPAL:0 %^AUML:0 ;
 "Testing Macron Nonsense"
 е:я <=> _ л л ь:0 %^DPAL:0 %^AUML:0 ;
 !!елль^DPAL%^AUML%>0
-!!ялл000000000000000      
+!!ялл000000000000000
+!!echo 'елле+V+Prs+Sg3' | lookup src/generator-gt-norm.xfst
+!!echo 'е̄лле+V+Prs+Sg3' | lookup src/generator-gt-norm.xfst      
 !!!Testing
 
 !!The following two combined rules describe the a-umlaut (diphthongization) of о̄-уа
