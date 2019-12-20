@@ -119,7 +119,7 @@ Cx:0 <=> _ Cx (MARKPAL:) Cy %^WG:0 ;
        matched ;
        
 "Apocope (2nd syllable" !пя̄дцэл:пя̄дцл-, куагар:куагр-
-VOW2SYLL:0 <=> [г|д ц] _ [л|р] %^2VAPOC:0 ;
+VOW2SYLL:0 <=> [CSTRO|CWEAK] _ [л|р] %^2VAPOC:0 ;
 
 !!!Testing
 "Ablaut уэ-уа"
