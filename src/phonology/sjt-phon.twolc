@@ -6,10 +6,9 @@ Alphabet
 !! Alphabet
 а А ӓ Ӓ а̄ А̄ б Б в В г Г д Д е Е ё Ё е̄ Е̄ ё̄ Ё̄ ж Ж з З һ Һ и И ӣ Ӣ й Й ҋ Ҋ к К л Л ӆ Ӆ м М ӎ Ӎ н Н ӊ Ӊ ӈ Ӈ о О о̄ О̄ п П р Р ҏ Ҏ с С т Т у У ӱ Ӱ ӯ Ӯ ф Ф х Х ц Ц ч Ч ш Ш щ Щ ы Ы ы̄ Ы̄ ь Ь ъ Ъ ҍ Ҍ э Э ӭ Ӭ э̄ Э̄ ю Ю ю̄ Ю̄ я Я я̄ Я̄ 
 
+а:0 э:0!VOW2SYLL
 к:0 п:0 т:0!CONSTOPV
-
 ь:0 ҍ:0!MARKPAL
-
 е̄:я̄!??
 
 !! Trigger symbols
@@ -30,6 +29,9 @@ Sets
 VOW = а е ё и о у ы э ю я  
         а̄ е̄ ё̄ ӣ о̄ ӯ ы̄ э̄ ю̄ я̄
         ӓ         ӱ ӹ ӭ  
+;
+
+VOW2SYLL = а э
 ;
 
 VOWEE = е̄
@@ -58,23 +60,17 @@ DUMMY = %^2VAPOC %^DPAL %^AUML %^WG
  
 Definitions
 
-GEMIN = [ д т |
-          л л | 
-          н н
-                ]
+CSTRO = [ л л   |
+          н н   |
+          д т   |
+          д ц   |
+          һ ц ь   ]
 ;
 
-SIMPL = [ д |
-          н     ]
+CWEAK = [ г |
+          д |
+          н   ]
 ;
-
-CSTRO = [ д ц |
-          һ ц ь ]
-;
-
-CWEAK = [ ц 
-                ]
-; 
  
 Rules
 
@@ -121,12 +117,26 @@ Cx:0 <=> _ Cx (MARKPAL:) Cy %^WG:0 ;
  where Cx in ( в в л л й й й м н н п р р ш ш )!list is perhaps incomplete
        Cy in ( р т к м в н т ч ц ч ч н т к т )!list is perhaps incomplete
        matched ;
+       
+"Apocope (2nd syllable" !пя̄дцэл:пя̄дцл-, куагар:куагр-
+VOW2SYLL:0 <=> [г|д ц] _ [л|р] %^2VAPOC:0 ;
 
 !!!Testing
 "Ablaut уэ-уа"
 э:а <=> у _ д т:0 (MARKPAL:0) (DUMMY:0)* %^AUML:0 ; 
         у _ д т   (MARKPAL:0) (DUMMY:0)* %^AUML:0 ;
 !!!Testing
+
+!!!%^AUML
+!!!уэ-уа
+!!!ӯ-уэ
+!!!о̄-уа
+!!!е̄-уа
+
+!!!%^IUML
+!!!е̄-ӣ
+!!!а̄-оа̄
+!!!уа-ӯ
 
 !!!Testing
 "Testing Macron"
@@ -147,8 +157,4 @@ VOWEE:VOWJAA <=> _ л л ь:0 %^DPAL:0 %^AUML:0 ;
 !о:у <=> _ о: GEMIN %^AUML:0 ;
 !"Umlaut о̄-уа II" ! уа:0о (чуанн-:чонн)
 !о:а <=> о: _ GEMIN %^AUML:0 ;
-
-!"2syllableV apocope" !пя̄дцэл:пя̄дцл-, куагар:куагр-
-!Cx:0 <=> VOW [CSTRO|CWEAK] _ CON (MARKPAL) %^2VAPOC:0 ; !CON can be defined less generally
-! where Cx in ( э а ) ;
 
