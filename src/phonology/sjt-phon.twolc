@@ -75,27 +75,25 @@ CWEAK = [ г |
 Rules
 
 "Palatal mark deletion"							  
-MARKPAL:0 <=> _             (DUMMY:0)*           %>: э: ;
-              _             (DUMMY:0)*           %>: а: ;
-              _             (DUMMY:0)* %^DPAL:0         ;
-              _ Cx          (DUMMY:0)* %^DPAL:0         ;
-              where Cx in ( р т к м н т к т )           ;!list is perhaps incomplete, check лльй
+MARKPAL:0 <=> _             (DUMMY:0)*           %>: [э:|а:] ;
+              _             (DUMMY:0)* %^DPAL:0              ;
+              _ Cx          (DUMMY:0)* %^DPAL:0              ;
+              where Cx in ( р т к м н т к т )                ;!list is perhaps incomplete, check лльй
 												  
 "Palatal glide deletion"					  
-й:0       <=> _             (DUMMY:0)*           %>: э: ;
-              _             (DUMMY:0)*           %>: а: ;
-              _ й: %^WG:0                                ;
+й:0       <=> _             (DUMMY:0)*           %>: [э:|а:] ;
+              _ й: %^WG:0                                    ;
 
 "Palatal vowel adjustment I"					  
-[э:е|а:я] <=>   ь:0         (DUMMY:0)*           %>: _   ;
-                й:0         (DUMMY:0)*           %>: _   ;
-                ч           (DUMMY:0)*           %>: _   ;
-												  
+[э:е|а:я] <=>   ь:0         (DUMMY:0)*           %>: _       ;
+                й:0         (DUMMY:0)*           %>: _       ;
+                ч           (DUMMY:0)*           %>: _       ;
+												  		     
 "Palatal vowel adjustment II"					  
-[э:ӭ|а:ӓ] <=>   ҍ:0         (DUMMY:0)*           %>: _   ;
+[э:ӭ|а:ӓ] <=>   ҍ:0         (DUMMY:0)*           %>: _       ;
 												  									  
 "CG hx:x (nonpal/pal preaspiration)" 
-һ:0       <=> _ [CONAFFRVL|CONSTOPVL]  (MARKPAL:)  %^WG:0            ;
+һ:0       <=> _ [CONAFFRVL|CONSTOPVL]  (MARKPAL:)  %^WG:0    ;
 
 "Gradation xx:x (nonpal/pal stops)"
 CONSTOPVL:0 <=> CONSTOPV _ (MARKPAL:) %^WG:0 ;
