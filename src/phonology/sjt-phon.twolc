@@ -87,21 +87,13 @@ MARKPAL:0 <=> _             (DUMMY:0)*           %>: э: ;
               _ й: %^WG:0                                ;
 
 "Palatal vowel adjustment I"					  
-э:е       <=>   ь:0         (DUMMY:0)*           %>: _   ;
+[э:е|а:я] <=>   ь:0         (DUMMY:0)*           %>: _   ;
                 й:0         (DUMMY:0)*           %>: _   ;
                 ч           (DUMMY:0)*           %>: _   ;
 												  
 "Palatal vowel adjustment II"					  
-э:ӭ       <=>   ҍ:0         (DUMMY:0)*           %>: _   ;
+[э:ӭ|а:ӓ] <=>   ҍ:0         (DUMMY:0)*           %>: _   ;
 												  									  
-"Palatal vowel adjustment III"					  
-а:я       <=>   ь:0         (DUMMY:0)*           %>: _   ;
-                й:0         (DUMMY:0)*           %>: _   ;
-                ч           (DUMMY:0)*           %>: _   ;
-
-"Palatal vowel adjustment IV"					  
-а:ӓ       <=>   ҍ:0         (DUMMY:0)*           %>: _   ;
-      											  
 "CG hx:x (nonpal/pal preaspiration)" 
 һ:0       <=> _ [CONAFFRVL|CONSTOPVL]  (MARKPAL:)  %^WG:0            ;
 
