@@ -74,36 +74,35 @@ CWEAK = [ г |
  
 Rules
 
-"Palatal mark deletion"							  
-MARKPAL:0 <=> _             (DUMMY:0)*           %>: [э:|а:] ;
-              _             (DUMMY:0)* %^DPAL:0              ;
-              _ Cx          (DUMMY:0)* %^DPAL:0              ;
+"Palatal mark deletion"
+MARKPAL:0  <=> _             (DUMMY:0)*           %>: [э:|а:] ;
+               _ (Cx)        (DUMMY:0)* %^DPAL:0              ;
               where Cx in ( р т к м н т к т )                ;!list is perhaps incomplete, check лльй
 												  
 "Palatal glide deletion"					  
-й:0       <=> _             (DUMMY:0)*           %>: [э:|а:] ;
+й:0        <=> _             (DUMMY:0)*           %>: [э:|а:] ;
               _ й: %^WG:0                                    ;
 
 "Palatal vowel adjustment I"					  
-[э:е|а:я] <=>   ь:0         (DUMMY:0)*           %>: _       ;
+[э:е|а:я]  <=>   ь:0         (DUMMY:0)*           %>: _       ;
                 й:0         (DUMMY:0)*           %>: _       ;
                 ч           (DUMMY:0)*           %>: _       ;
 												  		     
 "Palatal vowel adjustment II"					  
-[э:ӭ|а:ӓ] <=>   ҍ:0         (DUMMY:0)*           %>: _       ;
+[э:ӭ|а:ӓ]  <=>   ҍ:0         (DUMMY:0)*           %>: _       ;
 												  									  
 "CG hx:x (nonpal/pal preaspiration)" 
-һ:0       <=> _ [CONAFFRVL|CONSTOPVL]  (MARKPAL:)  %^WG:0    ;
+һ:0        <=> _ [CONAFFRVL|CONSTOPVL]  (MARKPAL:)  %^WG:0    ;
 
 "Gradation xx:x (nonpal/pal stops)"
 CONSTOPVL:0 <=> CONSTOPV _ (MARKPAL:) %^WG:0 ;
 
 "Gradation xx:x (continuants)" !except й, which needs a separate rule because it is due to a rule itself
-Cx:0      <=> _   Cx (MARKPAL:) %^WG:0             ;
+Cx:0       <=> _   Cx (MARKPAL:) %^WG:0             ;
  where Cx in ( в ж з л ӆ м ӎ н ӊ ӈ р ҏ ф х ) ;
 
 "Gradation xxy:xy (clusters)" !except лльй, ррьй, which perhaps need a separate rule because й is due to a rule itself
-Cx:0 <=> _ Cx (MARKPAL:) Cy %^WG:0 ;
+Cx:0       <=> _ Cx (MARKPAL:) Cy %^WG:0 ;
  where Cx in ( в в л л й й й м н н п р р ш ш )!list is perhaps incomplete
        Cy in ( р т к м в н т ч ц ч ч н т к т )!list is perhaps incomplete
        matched ;
