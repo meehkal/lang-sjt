@@ -75,21 +75,23 @@ CWEAK = [ г |
 Rules
 
 "Palatal mark deletion"
-MARKPAL:0  <=> _             (DUMMY:0)*           %>: [э:|а:] ;
-               _ (Cx)        (DUMMY:0)* %^DPAL:0              ;
-              where Cx in ( р т к м н т к т )                ;!list is perhaps incomplete, check лльй
+MARKPAL:0  <=> _             (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: [э:|а:] ;
+               _ (Cx)        (DUMMY:0) %^DPAL:0                          ;
+               where Cx in ( р т к м н т к т )                           ;!list is perhaps incomplete, check лльй
 												  
 "Palatal glide deletion"					  
-й:0        <=> _             (DUMMY:0)*           %>: [э:|а:] ;
-              _ й: %^WG:0                                    ;
+й:0        <=> _             (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: [э:	|а:] ;
+               _ й: %^WG:0                                               ;
 
 "Palatal vowel adjustment I"					  
-[э:е|а:я]  <=>   ь:0         (DUMMY:0)*           %>: _       ;
-                й:0         (DUMMY:0)*           %>: _       ;
-                ч           (DUMMY:0)*           %>: _       ;
+[э:е|а:я]  <=>   ь:0         (DUMMY:0) \%^DPAL:0 (DUMMY:0) %>: _         ;
+                 ь:0         (DUMMY:0)           (DUMMY:0) %>: _         ;
+                 й:0         (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: _         ;
+                 ч           (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: _         ;
 												  		     
 "Palatal vowel adjustment II"					  
-[э:ӭ|а:ӓ]  <=>   ҍ:0         (DUMMY:0)*           %>: _       ;
+[э:ӭ|а:ӓ]  <=>   ҍ:0         (DUMMY:0) \%^DPAL:0 (DUMMY:0) %>: _         ;
+                 ҍ:0         (DUMMY:0)           (DUMMY:0) %>: _         ;
 												  									  
 "CG hx:x (nonpal/pal preaspiration)" 
 һ:0        <=> _ [CONAFFRVL|CONSTOPVL]  (MARKPAL:)  %^WG:0    ;
@@ -112,8 +114,8 @@ VOW2SYLL:0 <=> [CSTRO|CWEAK] _ [л|р] %^2VAPOC:0 ;
 
 !!!Testing
 "Ablaut уэ-уа"
-э:а <=> у _ д т:0 (MARKPAL:0) (DUMMY:0)* %^AUML:0 ; 
-        у _ д т   (MARKPAL:0) (DUMMY:0)* %^AUML:0 ;
+э:а <=> у _ д т:0 (MARKPAL:0) (DUMMY:0) (DUMMY:0) (DUMMY:0) %^AUML:0 ; 
+        у _ д т   (MARKPAL:0) (DUMMY:0) (DUMMY:0) (DUMMY:0) %^AUML:0 ;
 !!!Testing
 
 !!!%^AUML

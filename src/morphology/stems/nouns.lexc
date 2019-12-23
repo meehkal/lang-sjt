@@ -4,14 +4,16 @@
 
 LEXICON Nouns
 
-! monosyllabic, palatalized, str-wk
+!monosyllabic, str-wk, palatalized inflection stem, no ablaut/umlaut
 алльм       N1A ;
-куулль      N1A ;
 пааҋк       N1A ;!unclear whether stem is palatalized; па̄ҋк:па̄йк
 пассь       N1A ;
 пассьпееййв N1A ;!unclear whether stem is palatalized
 пееййв      N1A ;!unclear whether stem is palatalized
-яяввьр      N1A ;
+я̄ввьр       N1A ;
+!---
+!monosyllabic, str-wk, palatalized inflection stem, ablaut+umlaut
+куулль      N1A ;
 
 ! monosyllabic, nonpalatalized, str-wk
 чаарр      N2A ;
