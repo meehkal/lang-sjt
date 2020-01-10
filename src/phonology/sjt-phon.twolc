@@ -8,7 +8,6 @@ Alphabet
 
 а:0 э:0!VOW2SYLL
 к:0 п:0 т:0!CONSTOPV
-ь:0 ҍ:0!MARKPAL
 е̄:я̄!??
 
 !! Trigger symbols
@@ -73,14 +72,15 @@ CWEAK = [ г |
 ;
  
 Rules
+"No Palatal mark deletion"
+MARKPAL:0  /<= _ р       (DUMMY:0) %>: [э:|а:] ;
 
 "Palatal mark deletion"
-MARKPAL:0  <=> _             (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: [э:|а:] ;
-               _ (Cx)        (DUMMY:0) %^DPAL:0                          ;
-               where Cx in ( р т к м н т к т )                           ;!list is perhaps incomplete, check лльй
+MARKPAL:0  <=>       _             (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: [э:|а:] ;
+                     _ (CON:)      (DUMMY:0) %^DPAL:0                          ;
 												  
 "Palatal glide deletion"					  
-й:0        <=> _             (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: [э:	|а:] ;
+й:0        <=> _             (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: [э:|а:] ;
                _ й: %^WG:0                                               ;
 
 "Palatal vowel adjustment I"					  
