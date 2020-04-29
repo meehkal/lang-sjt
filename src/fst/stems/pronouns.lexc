@@ -60,47 +60,55 @@ LEXICON Determiner
 ! d = stem ми-, ти-, си-
 
 LEXICON Personal
-мунн+Pron+Pers+Sg1:му pers_a ;
-тонн+Pron+Pers+Sg2:то pers_a ;
-сонн+Pron+Pers+Sg3:со pers_a ;
-тонн+Pron+Pers+Sg2:то pers_b ;
-сонн+Pron+Pers+Sg3:со pers_b ;
-мунн+Pron+Pers+Pl1:мы pers_c ;
-тонн+Pron+Pers+Pl2:ты pers_c ;
-сонн+Pron+Pers+Pl3:сы pers_c ;
-мунн+Pron+Pers+Pl1:ми pers_d ;
-тонн+Pron+Pers+Pl2:ти pers_d ;
-сонн+Pron+Pers+Pl3:си pers_d ;
-
-LEXICON pers_a
-+Nom:нн # ;
-+Gen:н # ;
-+Acc:н # ;
-+Ill:ннӭ # ;
-+Loc:нэсьт # ;
-+Loc+Use/Dial:ст # ;
-+Com:нэнҍ # ;
-+Abe:нха # ;
-+Ess:ннэнҍ # ;
-
-LEXICON pers_b
-!+Ill:ннӭ # ;
-+Loc+Use/Dial:ст # ;
-
-LEXICON pers_c
-+Sg+Ill+Use/Dial:ннӭ # ;
-+Pl+Nom:йй # ;
-+Pl+Ill:йе # ;
-
-LEXICON pers_d
-+Gen:н # ;
-+Acc:нэтҍ # ;
-+Loc:нэнҍ # ;
-+Loc+Use/Dial:ст # ;
-+Com:нэгуэйм # ;
-+Abe:нэха # ; 
-+Ess:ннэнҍ # ;
-
++Pron+Pers+Sg1+Nom:мунн          # ;
++Pron+Pers+Sg2+Nom:тонн          # ;
++Pron+Pers+Sg3+Nom:сонн          # ;
++Pron+Pers+Sg1+Gen:мӯн           # ;
++Pron+Pers+Sg2+Gen:то̄н           # ;
++Pron+Pers+Sg3+Gen:со̄н           # ;
++Pron+Pers+Sg1+Acc:мӯн           # ;
++Pron+Pers+Sg2+Acc:то̄н           # ;
++Pron+Pers+Sg3+Acc:со̄н           # ;
++Pron+Pers+Sg1+Ill:мӯннӭ         # ;
++Pron+Pers+Sg2+Ill:то̄ннӭ         # ;
++Pron+Pers+Sg3+Ill:со̄ннӭ         # ;
++Pron+Pers+Sg1+Loc:мӯнэсьт       # ;
++Pron+Pers+Sg2+Loc:то̄нэсьт       # ;
++Pron+Pers+Sg3+Loc:со̄нэсьт       # ;
++Pron+Pers+Sg1+Loc+Use/Dial:муст # ;
++Pron+Pers+Sg2+Loc+Use/Dial:тост # ;
++Pron+Pers+Sg3+Loc+Use/Dial:сост # ;
++Pron+Pers+Sg1+Com:мунэнҍ        # ;
++Pron+Pers+Sg2+Com:тонэнҍ        # ;
++Pron+Pers+Sg3+Com:сонэнҍ        # ;
++Pron+Pers+Sg1+Abe:мунха         # ;
++Pron+Pers+Sg2+Abe:тонха         # ;
++Pron+Pers+Sg3+Abe:сонха         # ;
++Pron+Pers+Sg1+Ess:муннэнҍ       # ;
++Pron+Pers+Sg2+Ess:тоннэнҍ       # ;
++Pron+Pers+Sg3+Ess:соннэнҍ       # ;
+!?+Part
++Pron+Pers+Pl1+Nom:мыйй          # ;
++Pron+Pers+Pl2+Nom:тыйй          # ;
++Pron+Pers+Pl3+Nom:сыйй          # ;
++Pron+Pers+Pl1+Gen:мӣнҍ          # ;
++Pron+Pers+Pl2+Gen:тӣнҍ          # ;
++Pron+Pers+Pl3+Gen:сӣнҍ          # ;
++Pron+Pers+Pl1+Ill:мыййе         # ;
++Pron+Pers+Pl2+Ill:тыййе         # ;
++Pron+Pers+Pl3+Ill:сыййе         # ;
++Pron+Pers+Pl1+Loc:мӣнӭнҍ        # ;
++Pron+Pers+Pl2+Loc:тӣнӭнҍ        # ;
++Pron+Pers+Pl3+Loc:сӣнӭнҍ        # ;
++Pron+Pers+Pl1+Com:мӣнӭгуэйм     # ;
++Pron+Pers+Pl2+Com:тӣнӭгуэйм     # ;
++Pron+Pers+Pl3+Com:сӣнӭгуэйм     # ;
++Pron+Pers+Pl1+Abe:мӣнӭха        # ;
++Pron+Pers+Pl2+Abe:тӣнӭха        # ;
++Pron+Pers+Pl3+Abe:сӣнӭха        # ;
++Pron+Pers+Pl1+Ess:мӣнӭнҍ        # ;
++Pron+Pers+Pl2+Ess:тӣнӭнҍ        # ;
++Pron+Pers+Pl3+Ess:сӣнӭнҍ        # ;
 
 ! Interrogative pronouns
 ! ======================
