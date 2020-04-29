@@ -3,10 +3,11 @@
 !! Verbs in the Ter Sami language are actions.
 
 LEXICON Verbs
-negaux ; ! negative auxilary verb
-copaux	; ! copula + auxilary verb
+negaux                ; ! negative auxilary verb
+copaux	              ; ! copula + auxilary verb
 !modal verb
-BYDT ; !эбе
+ELLJA                 ;
+BYDT                  ; !эбе
 !verbroots ;
 verbstems ; !lexical verb
 
@@ -16,7 +17,12 @@ LEXICON negaux
 
 
 LEXICON copaux
-+V+Cop+Prs+Pl3:лев # ;
++V+Cop+Prs+Pl3:лӣ  # ;
++V+Cop+Prs+Pl3:ле̄в # ;
+
+
+LEXICON ELLJA
++V+ELLJA+Prs+Sg3:элля      # ;
 
 
 LEXICON BYDT
