@@ -13,14 +13,17 @@ LEXICON V1A
 +V:%^WG             Conditional  ; !?depal?
 !---
 LEXICON V1C !пуэдтӭ
-+V:                 InfSuf-э     ;
-+V:%^WG%^DPAL%^AUML PrsSg1Suf-а  ;
-+V:%^DPAL%^AUML     PrsSg3Suf-Ø  ;
-+V:                 PrsPl3Suf-эв ;
-+V:%^WG             ImpSgSuf-Ø   ;
-+V:%^DPAL%^AUML     GerISuf-мэнҍ ;
-+V:%^DPAL%^AUML     PrsPrcSuf-ма ;
-+V:%^WG             Conditional  ; !?depal? ?umlaut/ablaut?
++V:                 InfSuf-э      ;
++V:%^WG%^DPAL%^AUML PrsSg1Suf-а   ;
++V:%^DPAL%^AUML     PrsSg3Suf-Ø   ;
++V:                 PrsPl3Suf-эв  ;
++V:                 PrtSg1Suf-э   ; !ablaut rule is missing
++V:                 PrtSg2Suf-экь ; !ablaut rule is missing
++V:%^WG             PrtSg3Suf-э   ; !ablaut rule is missing
++V:%^WG             ImpSgSuf-Ø    ;
++V:%^DPAL%^AUML     GerISuf-мэнҍ  ;
++V:%^DPAL%^AUML     PrsPrcSuf-ма  ;
++V:%^WG             Conditional   ; !?depal? ?umlaut/ablaut?
 !---
 LEXICON V2A
 +V:                 InfSuf-э     ;
@@ -45,21 +48,27 @@ LEXICON V2B
 !---
 !The actual suffixes
 LEXICON InfSuf-э
-+Inf:%>э      # ;
++Inf:%>э       # ;
 LEXICON PrsSg1Suf-а
-+Prs+Sg1:%>а  # ;
++Prs+Sg1:%>а   # ;
 LEXICON PrsSg1Suf-ам
-+Prs+Sg1:%>ам # ;
++Prs+Sg1:%>ам  # ;
 LEXICON PrsSg3Suf-Ø
-+Prs+Sg3:%>0  # ;
++Prs+Sg3:%>0   # ;
 LEXICON PrsPl3Suf-эв
-+Prs+Pl3:%>эв # ;
++Prs+Pl3:%>эв  # ;
+LEXICON PrtSg1Suf-э
++Prt+Sg1:%>э   # ;
+LEXICON PrtSg2Suf-экь
++Prt+Sg2:%>экь # ;
+LEXICON PrtSg3Suf-э
++Prt+Sg3:%>э   # ;
 LEXICON ImpSgSuf-Ø
-+Imp+Sg:%>0   # ;
++Imp+Sg:%>0    # ;
 LEXICON GerISuf-мэнҍ
-+GerI:%>мэнҍ  # ;
++GerI:%>мэнҍ   # ;
 LEXICON PrsPrcSuf-ма
-+PrsPrc:%>ма  # ;
++PrsPrc:%>ма   # ;
 
 !testing
 LEXICON Conditional

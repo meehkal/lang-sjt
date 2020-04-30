@@ -33,7 +33,6 @@ LEXICON BYDT
 
 LEXICON verbstems
 !monosyllabic, str-wk, palatalized inflection stem, no ablaut/umlaut
-кееһче:кееһч           V1A "schauen"              ;!nonsense form for testing
 ке̄һче:ке̄һч             V1A "schauen"              ;
 кыррьтэ:кыррьт         V1A "fliegen"              ;
 нееллькэ:неелльк       V1A "hungern"              ;!nonsense form for testing!unclear, whether this is the correct stem inflecting не̄ллкма (sjd ня̄ллкма)
@@ -42,10 +41,11 @@ LEXICON verbstems
 юльсассьтэ:юльсассьт   V1A "trinken (derivation)" ;
 !---
 !monosyllabic, str-wk, palatalized inflection stem, ablaut+umlaut
+ва̄лльтэ:ва̄лльт         V1C "nehmen"               ;
 пуэдтӭ:пуэдтҍ          V1C "kommen"               ;
-еелле:еелль            V1C "leben"                ;!nonsense form for testing
-елле:елль              V1C "leben"                ;!nonsense form for testing
 е̄лле:е̄лль              V1C "leben"                ;
+це̄ӆӆькэ:це̄ӆӆьк         V1C "sagen"                ;
+
 !---
 !monosyllabic, str-wk, nonpalatalized inflection stem, no ablaut/umlaut
 вуэсстлуввэ:вуэсстлувв V2A "treffen (derivation)" ;
@@ -59,7 +59,8 @@ LEXICON verbstems
 чо̄ннэ:чо̄нн             V2B                        ;
 
 !dump
-тӯллье:тӯлль ELAN_V ;
+тӯллье:тӯлль   ELAN_V ;
 
 LEXICON ELAN_V
 +V+Inf:%>е  # ;
++V+Inf:%>э  # ;
