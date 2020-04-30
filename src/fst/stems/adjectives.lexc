@@ -9,6 +9,7 @@ LEXICON Adjectives
 
 !monosyllabic, attr/pred, str-wk,
 чӣллк  A2 ;
+шаннт  A2 "родной" ;!<шэ̄ннтэ
 шӯрр   A2 "groß / большой" ;
 
 !bisyllabic -ш,
@@ -49,20 +50,6 @@ LEXICON Conjunctions
 
 да conj ;
 я  conj ;
-
-
-!! Conjunctions
-!  ----------
-!! Concunctions in the Ter Sami language describe things.
-
-LEXICON postp
-+PP: # ;
-
-LEXICON Adpositions
-альн    postp ; 
-гуэйкэ  postp ;
-э̄л      postp ;
-мӣлльтэ postp "с кем-чем" ;
 
 
 !! Particles

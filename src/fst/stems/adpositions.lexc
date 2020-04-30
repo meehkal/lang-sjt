@@ -1,0 +1,16 @@
+!! Adpositions
+!  ----------
+!! Adpositions in the Ter Sami language describe things.
+
+LEXICON ambip
++Ap: # ;
+
+LEXICON postp
++Po: # ;
+
+LEXICON Adpositions
+альн    postp ; 
+гуэйкэ  postp ;
+э̄л      postp ;
+мӣлльтэ postp "с кем-чем" ;
+эвтэсьт ambip "в дальнейшем" ;!<э̄ввт

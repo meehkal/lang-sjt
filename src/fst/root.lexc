@@ -37,7 +37,7 @@ Multichar_Symbols  !!≈ !!!Definitions for @CODE@
 
 !! The parts-of-speech are:
  +N +A +Adv +V                                 !!≈
- +Pron +CS +CC +Adp +Po +Pr +Interj +Pcle +Num !!≈
+ +Pron +CS +CC +Ap +Po +Pr +Interj +Pcle +Num !!≈
 
 !! The parts of speech are further split up into:
  +Prop +Pers +Dem +Interr +Refl +Recipr +Rel +Indef
