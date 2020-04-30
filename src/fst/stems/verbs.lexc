@@ -58,4 +58,8 @@ LEXICON verbstems
 чооннэ:чоонн           V2B "kreisen"              ;!nonsense form for testing
 чо̄ннэ:чо̄нн             V2B                        ;
 
-! vim: set ft=xfst-lexc:
+!dump
+тӯллье:тӯлль ELAN_V ;
+
+LEXICON ELAN_V
++V+Inf:%>е  # ;

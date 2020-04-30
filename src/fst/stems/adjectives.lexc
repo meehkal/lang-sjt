@@ -3,15 +3,22 @@
 !! Adjectives in the Ter Sami language describe things.
 
 LEXICON Adjectives
+!monosyllabic, attr-есь:pred, str-wk,
+рашшь:ражь A1 "некрепкий" ;
+ре̄йй:ре̄й   A1 "редкий" ;
 
-чииллк  A2 ;
-шуурр   A2 "groß / большой" ;
+!monosyllabic, attr/pred, str-wk,
+чӣллк  A2 ;
+шӯрр   A2 "groß / большой" ;
 
+!bisyllabic -ш,
 коаллэш A3 "lieb" ;
 
-ееррка  A4 "uralt" ;
+!bisyllabic -а,
+е̄ррка  A4 "uralt" ;
 
-! vim: set ft=xfst-lexc:
+!bisyllabic -ас, attr/pred,
+тоавас A5 "stark / сильный" ;
 
 
 !! Adverbs
@@ -23,12 +30,12 @@ LEXICON adv
 
 LEXICON Adverbs
 
-ё     adv "schon" ;
-ӣнцэ  adv "am Morgen" ;
-танна adv "dann" ;
-эвтэс adv "nach vorne" ; !cf. postpos. эвтэсьт
-
-! vim: set ft=xfst-lexc:
+танна   adv "dann" ;
+тоайвас adv "частый (повторяющийся)" ; !тоаййв
+че̄д     adv "насквозь" ;
+эвтэс   adv "nach vorne" ; !cf. postpos. эвтэсьт ?<
+ё       adv "schon" ;
+ӣнцэ    adv "am Morgen" ;
 
 
 !! Conjunctions
@@ -43,8 +50,6 @@ LEXICON Conjunctions
 да conj ;
 я  conj ;
 
-! vim: set ft=xfst-lexc:
-
 
 !! Conjunctions
 !  ----------
@@ -54,16 +59,25 @@ LEXICON postp
 +PP: # ;
 
 LEXICON Adpositions
-
-ээл postp ;
+альн    postp ; 
+гуэйкэ  postp ;
+э̄л      postp ;
+мӣлльтэ postp "с кем-чем" ;
 
 
 !! Particles
 !  ----------
 !! Particles in the Ter Sami language describe things.
 
-LEXICON Clitics
-+Pcle:-пэ # ;
-+Pcle:-ле # ;
+LEXICON clit
++Pcle: # ;
 
-! vim: set ft=xfst-lexc:
+LEXICON Clitics
+
+бэ   clit ;!bound
+де   clit ;!bound
+дэль clit ;!bound
+ле   clit ;
+пэ   clit ;
+те   clit ;
+тэль clit ;

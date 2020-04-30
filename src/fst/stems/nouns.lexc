@@ -6,33 +6,42 @@ LEXICON Nouns
 
 !monosyllabic, str-wk, palatalized inflection stem, no ablaut/umlaut
 алльм       N1A ;
-пааҋк       N1A ;!unclear whether stem is palatalized; па̄ҋк:па̄йк
+ва̄ррь       N2A ;!?ablaut+umlaut
+па̄ҋк        N1A ;!unclear whether stem is palatalized; па̄ҋк:па̄йк
 пассь       N1A ;
-пассьпееййв N1A ;!unclear whether stem is palatalized
+!пассьпе̄ййв  N1A ;!unclear whether stem is palatalized
 пе̄ййв       N1A ;!unclear whether stem is palatalized
 я̄ввьр       N1A ;
 !---
 !monosyllabic, str-wk, palatalized inflection stem, ablaut+umlaut
-куулль      N1A ;
+кӯлль       N1A ;
 
-! monosyllabic, nonpalatalized, str-wk
-чаарр      N2A ;
+! monosyllabic, str-wk, nonpalatalized inflection stem, no ablaut/umlaut
+ёгк         N2A ; 
+ча̄рр        N2A ;!?ablaut+umlaut
 
-! monosyllabic, nonpalatalized, str
-пысс       N2B ;
+! monosyllabic, str-wk, nonpalatalized inflection stem, no ablaut/umlaut
+ва̄рр        N2A ;!?ablaut+umlaut
+
+! monosyllabic, str, nonpalatalized inflection stem, no ablaut/umlaut
+пысс        N2B ;
 
 ! bisyllabic, no stem alternation
-куагар    N3 ;
-пяядцэл   N3 ;
-пя̄дцэл    N3 ;
+куагар      N3 ;
+пя̄дцэл      N3 ;
 
 
 ! derived participle noun stemss
-кыррьтэй:кыррьтэ   N4 ;!actually a regular verb root
-мееһцьтэй:мееһцьтэ N4 ;!actually a regular verb root
+кыррьтэй:кыррьтэ N4 ;!actually a regular verb root
+ме̄һцьтэй:ме̄һцьтэ N4 ;!actually a regular verb root
 
 
 ! derived diminutive noun stems
 чоазэнч:чоаз N5A ;
 
-! vim: set ft=xfst-lexc: !!this line was included in the empty project file
+!dump
+олма:олма     ELAN_N ;
+е̄ммьне:е̄ммьне ELAN_N ;
+
+LEXICON ELAN_N
++N+Sg+Nom:%>0 # ;

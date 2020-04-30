@@ -2,19 +2,26 @@
 !  --------------------
 !! The Ter Sami language adjectives compare.
 
+LEXICON A1
++Adj+Pred+Sg:%>0 #;
++Adj+Attr:%>есь  #;
+
 LEXICON A2
-+Attr:%>0 #;
-+Pred+Sg:%>0 #;
++Adj+Pred+Sg:%>0 #;
++Adj+Attr:%>0    #;
 
 LEXICON A3
-+Attr:%>0 #;
-+Pred+Sg:%>0 #;
-+Pred+Pl:%>0 #;
++Adj+Attr:%>0 #;
++Adj+Pred+Sg:%>0 #;
++Adj+Pred+Pl:%>0 #;
 
 LEXICON A4
-+Attr:%>0 #;
-+Pred+Sg:%>0 #;
-+Pred+Pl:%>0 #;
++Adj+Attr:%>0 #;
++Adj+Pred+Sg:%>0 #;
++Adj+Pred+Pl:%>0 #;
+
+LEXICON A5
++Adj+Attr:%>0 #;!unfinished
 
 !LEXICON Comparisons
 !+A+cmp:er       Cases   ;
