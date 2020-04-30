@@ -3,12 +3,14 @@
 !! The Ter Sami language adjectives compare.
 
 LEXICON A1
-+Adj+Pred+Sg:%>0 #;
-+Adj+Attr:%>есь  #;
++Adj+Pred+Sg:%>0     #;
++Adj+Pred+Pl:%^WG%>0 #;
++Adj+Attr:%^WG%>эсь  #;
 
 LEXICON A2
-+Adj+Pred+Sg:%>0 #;
-+Adj+Attr:%>0    #;
++Adj+Pred+Sg:%>0     #;
++Adj+Pred+Pl:%^WG%>0 #;
++Adj+Attr:%>0        #;
 
 LEXICON A3
 +Adj+Attr:%>0 #;
@@ -26,6 +28,4 @@ LEXICON A5
 !LEXICON Comparisons
 !+A+cmp:er       Cases   ;
 !+A+sup:est      Cases   ;
-
-! vim: set ft=xfst-lexc:
 

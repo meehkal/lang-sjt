@@ -45,6 +45,15 @@ CON = б в г д ж з Һ й ҋ к л ӆ м ӎ н ӊ ӈ п р ҏ с т ф х ц
 CONAFFRVL = ц ч
 ;
 
+CONSIBV = ж з
+;
+
+CONSIBVL = ш с
+;
+
+CONSIBGEMVL = шш
+;
+
 CONSTOPV = б д г
 ;
 
@@ -72,29 +81,38 @@ CWEAK = [ г |
 ;
  
 Rules
-"No Palatal mark deletion"
-MARKPAL:0  /<= _ р       (DUMMY:0) %>: [э:|а:] ;
+!"No Palatal mark deletion"
+!MARKPAL:0  /<= _ р       (DUMMY:0) %>: [э:|а:] ;
 
 "Palatal mark deletion"
 MARKPAL:0  <=>       _             (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: [э:|а:] ;
                      _ (CON:)      (DUMMY:0) %^DPAL:0                          ;
 												  
-"Palatal glide deletion"					  
-й:0        <=> _             (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: [э:|а:] ;
-               _ й: %^WG:0                                               ;
-
 "Palatal vowel adjustment I"					  
-[э:е|а:я]  <=>   ь:0         (DUMMY:0) \%^DPAL:0 (DUMMY:0) %>: _         ;
-                 ь:0         (DUMMY:0)           (DUMMY:0) %>: _         ;
-                 й:0         (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: _         ;
-                 ч           (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: _         ;
-												  		     
+[э:е|а:я]  <=>   ь:0         (DUMMY:0) \%^DPAL:0 (DUMMY:0) %>: _ ;
+                 ь:0         (DUMMY:0)           (DUMMY:0) %>: _ ;
+                 [й|ч]       (DUMMY:0) (DUMMY:0) (DUMMY:0) %>: _ ;
 "Palatal vowel adjustment II"					  
-[э:ӭ|а:ӓ]  <=>   ҍ:0         (DUMMY:0) \%^DPAL:0 (DUMMY:0) %>: _         ;
-                 ҍ:0         (DUMMY:0)           (DUMMY:0) %>: _         ;
+[э:ӭ|а:ӓ]  <=>   ҍ:0         (DUMMY:0) \%^DPAL:0 (DUMMY:0) %>: _ ;
+                 ҍ:0         (DUMMY:0)           (DUMMY:0) %>: _ ;
 												  									  
 "CG hx:x (nonpal/pal preaspiration)" 
 һ:0        <=> _ [CONAFFRVL|CONSTOPVL]  (MARKPAL:)  %^WG:0    ;
+
+"CG x:y (nonpal/pal affricates)"
+д:0        <=> _ CONSIBV (ь:) %^WG:0 ;
+
+"CG xx:y (nonpal/pal sibilants) 1"
+Cx:Cy <=> ш:0 _    (ь:) %^WG:0 ;
+ where Cx in ( ш с )
+       Cy in ( ж з )
+       matched ;
+"CG xx:y (nonpal/pal sibilants) 2"
+Cx:0  <=>     _ Cx: (ь:) %^WG:0 ; 
+ where Cx in ( ш с ) ;
+!шш:ж, сс:з
+!рашшь%>
+!ра0жь%>
 
 "Gradation xx:x (nonpal/pal stops)"
 CONSTOPVL:0 <=> CONSTOPV _ (MARKPAL:) %^WG:0 ;
@@ -105,8 +123,8 @@ Cx:0       <=> _   Cx (MARKPAL:) %^WG:0             ;
 
 "Gradation xxy:xy (clusters)" !except лльй, ррьй, which perhaps need a separate rule because й is due to a rule itself
 Cx:0       <=> _ Cx (MARKPAL:) Cy %^WG:0 ;
- where Cx in ( в в л л й й й м н н п р р ш ш )!list is perhaps incomplete
-       Cy in ( р т к м в н т ч ц ч ч н т к т )!list is perhaps incomplete
+ where Cx in ( в в л л ӆ й й й м н н п р р ш ш )!list is perhaps incomplete
+       Cy in ( р т к м к в н т ч ц ч ч н т к т )!list is perhaps incomplete
        matched ;
        
 "Apocope (2nd syllable" !пя̄дцэл:пя̄дцл-, куагар:куагр-
