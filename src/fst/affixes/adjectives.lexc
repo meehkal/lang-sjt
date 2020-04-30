@@ -3,19 +3,19 @@
 !! The Ter Sami language adjectives compare.
 
 LEXICON A1
-+Adj+Pred+Sg:%>0     #;
-+Adj+Pred+Pl:%^WG%>0 #;
-+Adj+Attr:%^WG%>эсь  #;
++Adj+Pred+Sg:%>э #;
+!+Adj+Pred+Pl:%^WG%>0 #;?unclear
++Adj+Attr:%>есь  #;
 
 LEXICON A2
 +Adj+Pred+Sg:%>0     #;
 +Adj+Pred+Pl:%^WG%>0 #;
-+Adj+Attr:%>0        #;
++Adj+Attr:%^WG%>эсь  #;!-есь would be morphophonologically more correct
 
 LEXICON A3
-+Adj+Attr:%>0 #;
-+Adj+Pred+Sg:%>0 #;
-+Adj+Pred+Pl:%>0 #;
++Adj+Pred+Sg:%>0     #;
++Adj+Pred+Pl:%^WG%>0 #;
++Adj+Attr:%>0        #;
 
 LEXICON A4
 +Adj+Attr:%>0 #;
@@ -23,6 +23,11 @@ LEXICON A4
 +Adj+Pred+Pl:%>0 #;
 
 LEXICON A5
++Adj+Attr:%>0 #;
++Adj+Pred+Sg:%>0 #;
++Adj+Pred+Pl:%>0 #;
+
+LEXICON A6
 +Adj+Attr:%>0 #;!unfinished
 
 !LEXICON Comparisons
