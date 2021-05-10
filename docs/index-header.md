@@ -1,7 +1,7 @@
 # Ter Sami documentation
 
 [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
-[![License](https://img.shields.io/github/license/giellalt/lang-sjt)](https://raw.githubusercontent.com/giellalt/lang-sjt/develop/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-sjt)](https://raw.githubusercontent.com/giellalt/lang-sjt/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-sjt)](https://github.com/giellalt/lang-sjt/issues)
 [![Build status](https://github.com/giellalt/lang-sjt/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sjt/actions)
 
