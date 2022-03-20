@@ -3,7 +3,7 @@
 [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
 [![License](https://img.shields.io/github/license/giellalt/lang-sjt)](https://github.com/giellalt/lang-sjt/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-sjt)](https://github.com/giellalt/lang-sjt/issues)
-[![Build status](https://github.com/giellalt/lang-sjt/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sjt/actions)
+[![Build Status](https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/lang-sjt/main/badge.svg)](https://github.com/giellalt/lang-sjt/actions)
 
 This page documents the work on the **Ter Sami language model**. 
 
