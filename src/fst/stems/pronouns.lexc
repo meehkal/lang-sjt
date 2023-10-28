@@ -18,18 +18,18 @@ LEXICON Demonstrative
 
 LEXICON dem
 +Sg+Nom:дт # ;
-+Sg+Nom:дта # ; !yet unclear what their distribution and function is
++Sg+Nom+Use/Long:дта # ; !yet unclear what their distribution and function is
 +Sg+Gen:нн # ;
-+Sg+Gen:нна # ; !yet unclear what their distribution and function is
++Sg+Gen+Use/Long:нна # ; !yet unclear what their distribution and function is
 +Sg+Acc:нн # ;
-+Sg+Acc:нна # ; !yet unclear what their distribution and function is
++Sg+Acc+Use/Long:нна # ; !yet unclear what their distribution and function is
 +Sg+Ill:з # ;
 +Sg+Loc:сьт # ;
 +Sg+Com:йн # ;
 +Sg+Abe:ннха # ;
 +Sg+Ess:йн # ;
 +Pl+Nom:гк # ;
-+Long+Pl+Nom:гка # ; !yet unclear what their distribution and function is
++Pl+Nom+Use/Long:гка # ; !yet unclear what their distribution and function is
 +Pl+Gen:йт # ;
 +Pl+Acc:йт # ;
 +Pl+Ill:йт # ;
@@ -37,7 +37,6 @@ LEXICON dem
 +Pl+Com:йтгуэйм # ;
 +Pl+Abe:йтха # ;
 +Pl+Ess:йнэнҍ # ;
-
 
 LEXICON Determiner
 манҍтэ+Pron+Det:манҍтэ # "какой / which (kind)" ;
@@ -49,7 +48,6 @@ LEXICON Determiner
 пугк+Pron+Det:пугк # "всё / all" ;
 !югке + singular only?
 !е̄ннэ + partitive
-
 
 ! Personal pronouns
 ! =================
@@ -174,7 +172,6 @@ LEXICON Indefinite
 ни-ми+Pron+Indef:ни-мэ̄ interr_b ;
 ни-ми+Pron+Indef:ни-ма̄ interr_c ;
 
-
 ! Relative pronoun
 ! =================
 ! a = stem ку-
@@ -204,7 +201,6 @@ LEXICON rel_b
 +Pl+Com:йтгуэйм # ;
 +Pl+Abe:йтха # ;
 +Pl+Ess:йнэнҍ # ;
-
 
 LEXICON Reflexive
 иджь+Pron+Refl:иджь refl_pron ;
